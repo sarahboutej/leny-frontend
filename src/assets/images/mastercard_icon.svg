@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="18" viewBox="0 0 32 18">
+  <g id="mastercard_icon" transform="translate(-1182 -274)">
+    <rect id="Rectangle_1676" data-name="Rectangle 1676" width="32" height="18" rx="3" transform="translate(1182 274)" fill="#1c3571"/>
+    <g id="Group_406" data-name="Group 406" transform="translate(1186.247 266.654)">
+      <path id="Path_229" data-name="Path 229" d="M8.815,16.346a7.327,7.327,0,0,1,2.938-5.867,7.346,7.346,0,1,0,0,11.734A7.328,7.328,0,0,1,8.815,16.346Z" fill="#f44336"/>
+      <path id="Path_230" data-name="Path 230" d="M28.407,9A7.3,7.3,0,0,0,24,10.479a7.326,7.326,0,0,1,0,11.734A7.342,7.342,0,1,0,28.407,9Z" transform="translate(-12.247)" fill="#ff9800"/>
+      <ellipse id="Ellipse_37" data-name="Ellipse 37" cx="2.938" cy="5.867" rx="2.938" ry="5.867" transform="translate(8.815 10.479)" fill="#ff7300"/>
+    </g>
+  </g>
+</svg>

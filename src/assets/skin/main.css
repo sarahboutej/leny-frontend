@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/** Demi **/
+@font-face {
+  font-family: "futuraPt";
+  src: url("../fonts/futura/FuturaPTDemi.otf");
+}
+
+/** BOOK **/
+@font-face {
+  font-family: "futuraPt";
+  src: url("../fonts/futura/FuturaPTBook.otf");
+}
+
+/** LIGHT **/
+@font-face {
+  font-family: "futuraPt";
+  src: url("../fonts/futura/FuturaPTLight.otf");
+}
+
+/** MeDIUM **/
+@font-face {
+  font-family: "futuraPt";
+  src: url("../fonts/futura/FuturaPTMedium.otf");
+}
+
+

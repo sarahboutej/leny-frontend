@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.5" height="20.5" viewBox="0 0 25.5 20.5">
+  <defs>
+    <filter id="Ellipse_38" x="5.5" y="0" width="20" height="20" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="CVC_icon" transform="translate(-1170 -295.5)">
+    <path id="Path_231" data-name="Path 231" d="M2,7.607A1.607,1.607,0,0,1,3.607,6H15.393A1.607,1.607,0,0,1,17,7.607v.536H2ZM2,9.214H17v5.893a1.607,1.607,0,0,1-1.607,1.607H3.607A1.607,1.607,0,0,1,2,15.107Zm8.571,3.75a.536.536,0,1,0,0,1.071h3.214a.536.536,0,0,0,0-1.071Z" transform="translate(1168 299.286)" fill="#b7bac3" fill-rule="evenodd"/>
+    <g transform="matrix(1, 0, 0, 1, 1170, 295.5)" filter="url(#Ellipse_38)">
+      <circle id="Ellipse_38-2" data-name="Ellipse 38" cx="5.5" cy="5.5" r="5.5" transform="translate(10 4.5)" fill="#fff"/>
+    </g>
+    <text id="_123" data-name="123" transform="translate(1182 307)" fill="#848790" font-size="5" font-family="FuturaPT-Book, Futura PT"><tspan x="0" y="0">123</tspan></text>
+  </g>
+</svg>

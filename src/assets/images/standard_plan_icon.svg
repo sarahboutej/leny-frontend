@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="134" height="134" viewBox="0 0 134 134">
+  <g id="standard_plan_icon" data-name="standard plan_icon" transform="translate(-222 -448)">
+    <g id="Group_386" data-name="Group 386" transform="translate(-349.023 -186.023)">
+      <g id="Ellipse_30" data-name="Ellipse 30" transform="translate(571.023 634.023)" fill="none" stroke="#009eb5" stroke-width="1" stroke-dasharray="7">
+        <circle cx="67" cy="67" r="67" stroke="none"/>
+        <circle cx="67" cy="67" r="66.5" fill="none"/>
+      </g>
+    </g>
+    <g id="Standar" transform="translate(258.725 484.725)">
+      <g id="home">
+        <rect id="Rectangle_1670" data-name="Rectangle 1670" width="60" height="60" transform="translate(0.275 0.275)" fill="#009eb5" opacity="0"/>
+        <rect id="Rectangle_1671" data-name="Rectangle 1671" width="10" height="18" transform="translate(25.275 35.275)" fill="#009eb5"/>
+        <path id="Path_209" data-name="Path 209" d="M46.95,22.631,27.5,2.75a2.523,2.523,0,0,0-3.583,0L4.463,22.657A5.046,5.046,0,0,0,3,26.264V47.407a5.046,5.046,0,0,0,4.768,5.046h7.846V29.746a2.523,2.523,0,0,1,2.523-2.523H33.276A2.523,2.523,0,0,1,35.8,29.746V52.453h7.846a5.046,5.046,0,0,0,4.768-5.046V26.264a5.222,5.222,0,0,0-1.463-3.633Z" transform="translate(4.569 3.052)" fill="#009eb5"/>
+      </g>
+    </g>
+  </g>
+</svg>
