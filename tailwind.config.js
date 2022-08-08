@@ -38,12 +38,14 @@ module.exports = {
         'h1xl': '2.5rem',
         'h2xl': '2rem',
         'subtitle': '1.25rem',
+        'xxs': '0.625rem'
       },
       height: {
         'video5' : '25.063rem',
       },
       minHeight: {
         'search': '49.5rem',
+        'notif': '35rem'
       },
       borderRadius: {
         'search-card': '2.4rem',
