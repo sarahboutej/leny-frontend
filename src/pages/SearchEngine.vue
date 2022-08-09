@@ -1,7 +1,7 @@
 <template>
   <Header />
   <section class="mt-[5.625rem] pt-14 px-4 lg:px-0">
-    <div class="container mx-auto">
+    <div class="container mx-auto px-4">
       <div class="section-title mb-20">
         <h1 class="text-h1xl text-leny-blue-800 font-medium text-center">
           The best real estate search engine

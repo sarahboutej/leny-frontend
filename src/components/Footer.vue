@@ -1,19 +1,19 @@
 <template>
   <section class="py-14 bg-leny-light-gray">
-    <div class="container mx-auto text-center">
-      <img src="../assets/images/full_logo.png" alt="" class="w-22 mx-auto mb-6" />
-      <p class="text-sm text-leny-gray-700 font-extralight mb-5 w-1/2 mx-auto">
+    <div class="container mx-auto px-4 text-center">
+      <img src="../assets/images/full_logo.png" alt="" class="w-20 md:w-28 mx-auto mb-6" />
+      <p class="text-xs md:text-sm text-leny-gray-700 font-extralight mb-5 w-full md:w-1/2 mx-auto">
         A customizable platform, in your name facilitation the search for your
         customers. Ads from more than 3000 real estate sites, grouped in one and
         the same place
       </p>
-      <div class="hidden md:flex items-center space-x-1 justify-center mb-12">
+      <div class="flex items-center space-x-1 justify-center mb-12">
         <a href="/subscription_plan" class="
             relative
             px-2
             pb-2
             font-light
-            text-based text-leny-gray-700
+            md:text-based text-xs text-leny-gray-700
             hover:text-leny-blue-800
             transition
             duration-300">Subscription Plans</a>
@@ -22,7 +22,7 @@
             px-2
             pb-2
             font-light
-            text-based text-leny-gray-700
+            md:text-based text-xs text-leny-gray-700
             hover:text-leny-blue-800
             transition
             duration-300">Contact Us</a>

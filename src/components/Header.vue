@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar goes here -->
   <nav class="bg-white fixed w-full z-50 top-0" :class="{ scrolled: !view.atTopOfPage }">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto px-4 px-4">
       <div class="flex justify-between items-center my-6">
         <div class="flex mr-5 flex-auto">
           <div>
