@@ -1,10 +1,10 @@
 <template>
-  <div class="relative card-wrapper shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-search-card pb-8">
+  <div class="relative card-wrapper shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-search-card-mobile md:rounded-search-card pb-2 md:pb-8">
     <div class="relative">
       <p class="absolute left-5 top-5">
         <img src="../assets/images/heart.svg" loading="lazy" role="presentation">
       </p>
-      <img :src="require(`../assets/images/${image}`)" class="mx-auto mb-3" loading="lazy" role="presentation" />
+      <img :src="require(`../assets/images/${image}`)" class="mx-auto mb-3 w-full" loading="lazy" role="presentation" />
       <div class="px-6">
          <span class="text-sm text-leny-cyan-400 font-normal">{{ itemType }}</span>
       <h3 class="text-leny-gray-700 text-base font-medium mb-4">

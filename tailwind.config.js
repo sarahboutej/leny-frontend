@@ -2,7 +2,7 @@
 module.exports = {
   content: [
     "./public/index.html",
-    "./src/**/*.{vue,js}",
+    "./src/**/*.{vue,js,ts}",
   ],
   theme: {
     extend: {
@@ -32,6 +32,7 @@ module.exports = {
         'login-sm': "url('../images/login_bg_sm.jpg')",
         'card': "url('../images/card-bg.png')",
         'search': "url('../images/search-bg.jpg')",
+        'smb': "url('../images/search-mobile.jpg')",
       },
       fontSize: {
         '7xl': '7rem',
@@ -49,8 +50,12 @@ module.exports = {
       },
       borderRadius: {
         'search-card': '2.4rem',
-      }
+        'search-card-mobile': '3.2rem',
+      },
+      screens: {
+        'small': '460px',
+      },
     },
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }

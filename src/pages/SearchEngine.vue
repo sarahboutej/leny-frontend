@@ -12,8 +12,8 @@
       </div>
     </div>
   </section>
-  <section class="pb-14">
-    <div class="container bg-search bg-no-repeat bg-contain bg-top mx-auto px-4 mb-14">
+  <section class="pb-14 hidden md:block">
+    <div class="container bg-search2 xl:bg-search bg-no-repeat bg-contain xl:bg-cover bg-top mx-auto px-4 mb-14">
       <div class="row px-6 2xl:px-10 pt-20 2xl:pt-28">
       <div class="flex justify-between space-x-4 px-8">
         <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
@@ -31,6 +31,15 @@
       </div>
     </div>
     <a href="/subscription_plan" class="py-3 px-12 block w-44 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</a>
+  </section>
+  <section class="block md-hidden pb-14 mx-4 md:mx-0">
+    <div class="container mx-auto px-4 bg-no-repeat bg-contain small:bg-cover bg-top bg-smb pt-14 small:pt-28 pb-8">
+      <div class="flex justify-between space-x-4 px-8 mb-5">
+        <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
+        <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20 m² </span>
+      </div>
+      <SearchCard class="w-10/12 mx-auto" :item-type="cardItems[0].type" :item-title="cardItems[0].title" :address="cardItems[0].address" :image="cardItems[0].image" :rooms="cardItems[0].rooms" :bathroom="cardItems[0].bathroom" :price="cardItems[0].price" />
+    </div>
   </section>
   <Footer />
 </template>
