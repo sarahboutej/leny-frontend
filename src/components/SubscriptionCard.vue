@@ -1,15 +1,15 @@
 <template>
   <div class="subsecritip-card relative card-wrapper shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-3xl py-8 px-9 z-10 before:w-full before:h-3/4 before:absolute before:top-0 before:inset-x-0 before:mx-auto before:bg-card before:bg-no-repeat before:bg-top before:bg-contain before:z-0" :class="(isFavorite && 'bg-leny-blue-800 my-0 md:-my-8 shadow-2xl') || ''">
     <div>
-      <h3 class="text-leny-cyan-400 text-2xl font-medium">
+      <h3 class="text-leny-cyan-400 text-subtitle md:text-2xl font-medium">
         {{ planName }} Plan
       </h3>
-      <span class="text-base text-leny-gray-700 font-normal" :class="(isFavorite && 'text-white') || ''">{{ planType }} Subscription</span>
+      <span class="text-sm md:text-base text-leny-gray-700 font-normal" :class="(isFavorite && 'text-white') || ''">{{ planType }} Subscription</span>
       <img :src="require(`../assets/images/${icon}`)" class="mx-auto my-11" loading="lazy" role="presentation" />
       <ul class="pb-28">
         <li v-for="item in planDetails" :key="item" class="flex mb-4">
           <img src="../assets/images/check_icon.svg" loading="lazy" role="presentation" width="12" height="12" />
-          <span class="ml-3 text-sm text-leny-gray-700" :class="(isFavorite && 'text-white') || ''">
+          <span class="ml-3 text-xs md:text-sm text-leny-gray-700" :class="(isFavorite && 'text-white') || ''">
             {{ item }}
           </span>
         </li>

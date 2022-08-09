@@ -1,12 +1,12 @@
 <template>
   <Header />
-  <section class="mt-[5.625rem] pt-14 pb-24 px-4 lg:px-0">
+  <section class="mt-[5.625rem] pt:4 md:pt-14 pb-14 md:pb-24 px-4 lg:px-0">
     <div class="container mx-auto px-4">
-      <div class="section-title mb-20">
-        <h1 class="text-h1xl text-leny-blue-800 font-medium text-center">
+      <div class="section-title mb-6 md:mb-20">
+        <h1 class="text-h2xl md:text-h1xl text-leny-blue-800 font-medium text-center">
           A solution for every need
         </h1>
-        <p class="text-leny-gray-700 text-2xl text-center">
+        <p class="text-leny-gray-700 text-sm md:text-2xl text-center">
           Leny is suitable for all real estate professionals
         </p>
       </div>

@@ -13,8 +13,8 @@
     </div>
   </section>
   <section class="pb-14">
-    <div class="container bg-search bg-no-repeat bg-cover bg-top mx-auto mb-14">
-      <div class="row px-10 pt-28">
+    <div class="container bg-search bg-no-repeat bg-contain bg-top mx-auto px-4 mb-14">
+      <div class="row px-6 2xl:px-10 pt-20 2xl:pt-28">
       <div class="flex justify-between space-x-4 px-8">
         <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
         <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20 m² </span>
@@ -24,7 +24,7 @@
         <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> JouÉ-lÈs-tours </span>
       </div>
       </div>
-      <div class="row px-10 py-14">
+      <div class="row px-6 2xl:px-10 py-8 2xl:py-14">
         <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-1 gap-4">
           <SearchCard v-for="(item, index) in cardItems" :key="index" :item-type="item.type" :item-title="item.title" :address="item.address" :image="item.image" :rooms="item.rooms" :bathroom="item.bathroom" :price="item.price" />
         </div>
