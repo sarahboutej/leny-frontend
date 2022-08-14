@@ -30,7 +30,7 @@
         </div>
       </div>
     </div>
-    <a href="/subscription_plan" class="py-3 px-12 block w-44 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</a>
+    <router-link to="/subscription_plan" class="py-3 px-12 block w-44 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</router-link>
   </section>
   <section class="block md-hidden pb-14 mx-4 md:mx-0">
     <div class="container mx-auto px-4 bg-no-repeat bg-contain small:bg-cover bg-top bg-smb pt-14 small:pt-28 pb-8">

@@ -53,7 +53,7 @@
           <p class="text-sm sm:text-base text-white sm:text-leny-gray-800 font-medium mb-3">Payment not submitted</p>
           <p class="text-xs sm:text-sm text-white sm:text-leny-gray-800">“Please check your mail”</p>
           <a href="#" class="
-              text-sm text-leny-cyan-400 sm:text-leny-blue-800 
+              text-sm text-leny-cyan-400 sm:text-leny-blue-800
               block
               mt-8
               underline underline-offset-1

@@ -14,7 +14,7 @@
         </div>
 
         <p class="py-4 text-center mx-auto mt-6 space-y-5">
-          <a href="/subscription_plan" class="
+          <router-link to="/subscription_plan" class="
                 relative
                 px-2
                 pb-2
@@ -30,8 +30,8 @@
                 hover:before:bottom-0
                 hover:before:inset-x-0
                 hover:before:mx-auto
-              ">Subscription Plans</a>
-          <a href="/contact" class="
+              ">Subscription Plans</router-link>
+          <router-link to="/contact" class="
                 relative
                 px-2
                 pb-2
@@ -47,10 +47,10 @@
                 hover:before:bottom-0
                 hover:before:inset-x-0
                 hover:before:mx-auto
-              ">Contact Us</a>
+              ">Contact Us</router-link>
         </p>
         <p class="text-center mx-auto mt-4 space-x-6">
-          <a href="/login" class="
+          <router-link to="/login" class="
               py-2
               px-4
               w-24
@@ -64,8 +64,8 @@
               shadow-md
               transition
               duration-300
-            ">Login</a>
-          <a href="/search" class="
+            ">Login</router-link>
+          <router-link to="/search" class="
               py-2
               px-4
               w-24
@@ -79,7 +79,7 @@
               shadow-md
               transition
               duration-300
-            ">Register</a>
+            ">Register</router-link>
         </p>
       </label>
     </label>

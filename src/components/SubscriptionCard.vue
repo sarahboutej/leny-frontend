@@ -18,11 +18,11 @@
         <p class="text-center text-leny-cyan-400 text-2xl font-medium mb-8" :class="(isFavorite && 'text-white') || ''">
           {{ price }} $ H.T
         </p>
-        <a href="/signup" class="py-3 px-12 w-48 block mx-auto text-center font-regular text-xs text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300" :class="
+        <router-link to="/signup" class="py-3 px-12 w-48 block mx-auto text-center font-regular text-xs text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300" :class="
             (isFavorite &&
               'bg-leny-cyan-400 border-leny-cyan-400 hover:text-leny-cyan-400') ||
             ''
-          ">GO {{ planName }}</a>
+          ">GO {{ planName }}</router-link>
       </div>
     </div>
     <span v-if="isFavorite" class="w-16 h-16 absolute bg-white -top-4 -right-4 rounded-full text-xs flex justify-center items-center text-center text-leny-cyan-400 shadow-[0px_0px_6px_rgba(0,0,0,0.29)] p-3">Most Popular</span>

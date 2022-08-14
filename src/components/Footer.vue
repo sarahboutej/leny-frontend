@@ -8,7 +8,7 @@
         the same place
       </p>
       <div class="flex items-center space-x-1 justify-center mb-12">
-        <a href="/subscription_plan" class="
+        <router-link to="/subscription_plan" class="
             relative
             px-2
             pb-2
@@ -16,8 +16,8 @@
             md:text-based text-xs text-leny-gray-700
             hover:text-leny-blue-800
             transition
-            duration-300">Subscription Plans</a>
-        <a href="/contact" class="
+            duration-300">Subscription Plans</router-link>
+        <router-link to="/contact" class="
             relative
             px-2
             pb-2
@@ -25,7 +25,7 @@
             md:text-based text-xs text-leny-gray-700
             hover:text-leny-blue-800
             transition
-            duration-300">Contact Us</a>
+            duration-300">Contact Us</router-link>
       </div>
       <div class="social-media flex items-center justify-center space-x-3 mb-3">
         <a href="https://www.facebook.com" target="_blank"><img src="../assets/images/facebook_icon.svg" alt=""></a>

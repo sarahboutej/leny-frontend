@@ -132,7 +132,7 @@
               duration-300
             ">Login</a>
           <a href="#" class="
-              text-sm text-white sm:text-leny-blue-800 
+              text-sm text-white sm:text-leny-blue-800
               block
               mt-8
               underline underline-offset-1
@@ -146,7 +146,7 @@
             bottom-10
           ">
           Have an account?
-          <a href="/signup" class="text-white sm:text-leny-blue-800 font-medium"> Sign up</a>
+          <router-link to="/signup" class="text-white sm:text-leny-blue-800 font-medium">Sign up</router-link>
         </p>
       </div>
     </div>

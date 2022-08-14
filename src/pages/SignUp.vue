@@ -186,14 +186,15 @@
             ">Sign Up</a>
           <p class="
               signup
-              text-sm 
+              text-sm
             text-leny-gray-800
               mt-6
               font-light
             ">
             If you have an account?
-            <a href="/login" class="text-leny-blue-800 font-medium">
-              Login</a>
+            <router-link to="/login" class="text-leny-blue-800 font-medium">
+              Login
+            </router-link>
           </p>
         </form>
       </div>

@@ -9,7 +9,7 @@
           <p class="text-xs md:text-sm text-leny-gray-700 font-light mb-10">
             A customizable platform, in your name facilitation the search for your customers. Ads from more than 3000 real estate sites, grouped in one and the same place
           </p>
-          <a href="/search" class="
+          <router-link to="/search" class="
               py-3
               px-12
               w-48
@@ -22,7 +22,7 @@
               hover:bg-transparent hover:text-leny-blue-800
               shadow-md
               transition
-              duration-300">Try For Free</a>
+              duration-300">Try For Free</router-link>
         </div>
         <div class="justify-self-end md:col-start-3 md:col-end-6  order-first md:order-last">
           <img src="../assets/images/hero.jpg" />
