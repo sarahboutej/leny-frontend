@@ -7,7 +7,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'custom': ['"futuraPt"'],
+        'futura': ["Futura"],
       },
       colors: {
         'leny-blue-900': '#0E1D44',

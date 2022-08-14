@@ -2,28 +2,59 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply font-futura;
+  }
+}
+
+/** Light **/
+@font-face {
+  font-family: "Future";
+  src: url("../fonts/futura/futuraptlight.woff") format("woff"), 
+       url("../fonts/futura/futuraptlight.woff2") format("woff2");
+  font-weight: 300;
+}
+
+/** Medium **/
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/futura/futuraptmedium.woff") format("woff"),
+       url("../fonts/futura/futuraptmedium.woff2") format("woff2");
+  font-weight: 500;
+}
+
+/** Heavy **/
+@font-face {
+  font-family: "Futura";
+  src: url("../fonts/futura/futuraptheavy.woff") format("woff"),
+       url("../fonts/futura/futuraptheavy.woff2") format("woff2");
+  font-weight: 900;
+}
+
 /** Demi **/
 @font-face {
-  font-family: "futuraPt";
-  src: url("../fonts/futura/FuturaPTDemi.otf");
+  font-family: "Futura";
+  src: url("../fonts/futura/futuraptdemi.woff") format("woff"),
+       url("../fonts/futura/futuraptdemi.woff2") format("woff2");
+  font-weight: 600;
 }
 
-/** BOOK **/
+/** Book **/
 @font-face {
-  font-family: "futuraPt";
-  src: url("../fonts/futura/FuturaPTBook.otf");
+  font-family: "Futura";
+  src: url("../fonts/futura/futuraptbook.woff") format("woff"),
+       url("../fonts/futura/futuraptbook.woff2") format("woff2");
+  font-weight: 400;
 }
 
-/** LIGHT **/
+/** Bold **/
 @font-face {
-  font-family: "futuraPt";
-  src: url("../fonts/futura/FuturaPTLight.otf");
+  font-family: "Futura";
+  src: url("../fonts/futura/futuraptbold.woff") format("woff"),
+       url("../fonts/futura/futuraptbook.woff2") format("woff2");
+  font-weight: 700;
 }
 
-/** MeDIUM **/
-@font-face {
-  font-family: "futuraPt";
-  src: url("../fonts/futura/FuturaPTMedium.otf");
-}
 
 
