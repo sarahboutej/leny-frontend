@@ -4,8 +4,9 @@
       <div class="sm:flex items-center justify-center sm:min-h-screen col-start-1 col-end-8 sm:col-start-1 sm:col-end-4 bg-dark-login-image bg-center bg-no-repeat bg-cover">
         <div class="lg:w-4/5 py-12 px-4 lg:px-0 lg:py-0">
           <div class="mb-9">
-            <a href="/signup">
-              <img src="../assets/images/arrow_icon.svg" alt="" /></a>
+            <router-link to="/signup">
+              <img src="../assets/images/arrow_icon.svg" alt="" />
+            </router-link>
           </div>
           <div>
             <span class="text-white text-base block">Try Leny Standard</span>
@@ -81,7 +82,7 @@
               <option value="audi">USA</option>
             </select>
           </div>
-          <a href="/success" class="py-3 px-12 block w-3/4 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Start Trial</a>
+          <router-link to="/success" class="py-3 px-12 block w-3/4 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Start Trial</router-link>
           <p class="signup text-center text-sm w-3/4 mx-auto text-leny-gray-800 mt-3 font-light">
             After you trial ends, you will be charged 89 € per month starting
             May 11, 2022. You can always can always cancel before then. >

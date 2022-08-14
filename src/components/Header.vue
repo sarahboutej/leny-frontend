@@ -6,13 +6,13 @@
         <div class="flex mr-5 flex-auto">
           <div>
             <!-- Website Logo -->
-            <a href="/" class="flex items-center">
+            <router-link to="/" class="flex items-center">
               <img :src="view.atTopOfPage && require('../assets/images/logo.svg')  || require('../assets/images/logoblue_img.png')" />
-            </a>
+            </router-link>
           </div>
           <!-- Primary Navbar items -->
           <div class="hidden md:flex items-center space-x-1 m-auto">
-            <a href="/subscription_plan" class="
+            <router-link to="/subscription_plan" class="
                 relative
                 px-2
                 pb-2
@@ -27,8 +27,8 @@
                 hover:before:bottom-0
                 hover:before:inset-x-0
                 hover:before:mx-auto
-              ">Subscription Plans</a>
-            <a href="/contact" class="
+              ">Subscription Plans</router-link>
+            <router-link to="/contact" class="
                 relative
                 px-2
                 pb-2
@@ -43,12 +43,12 @@
                 hover:before:bottom-0
                 hover:before:inset-x-0
                 hover:before:mx-auto
-              ">Contact Us</a>
+              ">Contact Us</router-link>
           </div>
         </div>
         <!-- Secondary Navbar items -->
         <div class="hidden md:flex items-center space-x-3">
-          <a href="/login" class="
+          <router-link to="/login" class="
               py-2
               px-4
               w-24
@@ -62,8 +62,8 @@
               shadow-md
               transition
               duration-300
-            ">Login</a>
-          <a href="/search" class="
+            ">Login</router-link>
+          <router-link to="/search" class="
               py-2
               px-4
               w-24
@@ -77,7 +77,7 @@
               shadow-md
               transition
               duration-300
-            ">Register</a>
+            ">Register</router-link>
           <div class="dropdown dropdown-end mt-1">
              <label tabindex="0" class="bg-transparent border-0">
                 <img src="../assets/images/language.svg" />
