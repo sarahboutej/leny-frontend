@@ -1,6 +1,6 @@
 <template>
   <section class="flex items-center md:min-h-[calc(100vh_-_5.625rem)] md:h-[calc(100vh_-_5.625rem)] mt-[5.625rem] md:overflow-hidden">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
       <div class="grid items-center md:grid-cols-5 grid-rows-1 gap-4">
         <div class="prose md:col-start-1 md:col-end-3 text-center md:text-left">
           <p class="text-sm md:text-base uppercase font-medium text-leny-blue-900 mb-0">your real estate ad aggregator,in brand</p>

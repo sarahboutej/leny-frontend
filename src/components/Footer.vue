@@ -1,6 +1,6 @@
 <template>
   <section class="py-14 bg-leny-light-gray">
-    <div class="container mx-auto px-4 text-center">
+    <div class="container mx-auto text-center">
       <img src="../assets/images/full_logo.png" alt="" class="w-20 md:w-28 mx-auto mb-6" />
       <p class="text-xs md:text-sm text-leny-gray-700 font-extralight mb-5 w-full md:w-1/2 mx-auto">
         A customizable platform, in your name facilitation the search for your

@@ -6,6 +6,20 @@ module.exports = {
   ],
   theme: {
     extend: {
+      container: {
+        screens: {
+          'xs' : '640px',
+          'sm' : '778px',
+          'md' : '992px',
+          'lg' : '1024px',
+          '2xl': '1280px',
+        },
+        padding: {
+          DEFAULT: '1rem',
+          'xs' : '1.5<rem',
+          '2xl' : '8.5rem'
+        }
+      },
       fontFamily: {
         'futura': ["Futura"],
       },
@@ -55,6 +69,18 @@ module.exports = {
       screens: {
         'small': '460px',
       },
+      keyframes: {
+        slideInRight: {
+          '0%': { transform: 'translate3d(100%, 0, 0)' },
+          '100%': { transform: 'translate3d(0, 0, 0)' },
+        }
+      },
+      animation: {
+        slideIn: 'slideInRight 1.5s',
+      },
+      boxShadow: {
+        'test': '1.4em 0 rgba(255,255,255,1), 2.8em 0 rgba(255,255,255,1), 4.2em 0 rgba(255,255,255,1)'
+      }
     },
   },
   plugins: [require("daisyui")],

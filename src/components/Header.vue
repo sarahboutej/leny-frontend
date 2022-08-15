@@ -1,7 +1,7 @@
 <template>
   <!-- Navbar goes here -->
   <nav class="bg-white fixed w-full z-50 top-0" :class="{ scrolled: !view.atTopOfPage }">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
       <div class="flex justify-between items-center my-6">
         <div class="flex mr-5 flex-auto">
           <div>
@@ -15,7 +15,7 @@
             <router-link to="/subscription_plan" class="
                 relative
                 px-2
-                pb-2
+                font-normal
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
                 transition
@@ -24,14 +24,14 @@
                 hover:before:w-4
                 hover:before:h-px
                 hover:before:absolute
-                hover:before:bottom-0
+                hover:before:-bottom-1
                 hover:before:inset-x-0
-                hover:before:mx-auto
-              ">Subscription Plans</router-link>
+                hover:before:mx-auto"
+                :class="activePage === 'subscription' && 'text-leny-blue-800 before:bg-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto'" >Subscription Plans</router-link>
             <router-link to="/contact" class="
                 relative
                 px-2
-                pb-2
+                font-normal
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
                 transition
@@ -40,10 +40,10 @@
                 hover:before:w-4
                 hover:before:h-px
                 hover:before:absolute
-                hover:before:bottom-0
+                hover:before:-bottom-1
                 hover:before:inset-x-0
-                hover:before:mx-auto
-              ">Contact Us</router-link>
+                hover:before:mx-auto"
+               :class="activePage === 'contact' && 'text-leny-blue-800 before:bg-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto'">Contact Us</router-link>
           </div>
         </div>
         <!-- Secondary Navbar items -->
@@ -53,13 +53,12 @@
               px-4
               w-24
               text-center
-              font-regular
+              font-normal
               text-sm text-white
               bg-leny-blue-800
               rounded-full
               border border-leny-blue-800
               hover:bg-transparent hover:text-leny-blue-800
-              shadow-md
               transition
               duration-300
             ">Login</router-link>
@@ -68,13 +67,12 @@
               px-4
               w-24
               text-center
-              font-regular
+              font-normal
               text-sm text-white
               bg-leny-cyan-400
               rounded-full
               border border-leny-cyan-400
               hover:bg-transparent hover:text-leny-cyan-400
-              shadow-md
               transition
               duration-300
             ">Register</router-link>
@@ -85,7 +83,7 @@
               <LanguageMenu />
           </div>
           <div class="dropdown dropdown-end mt-1.5">
-            <label tabindex="0" class="bg-transparent border-0 relative">
+            <div tabindex="0" class="bg-transparent border-0 relative">
               <img src="../assets/images/notification.svg" />
               <span class="
                 absolute
@@ -97,14 +95,14 @@
                 bg-leny-cyan-400
                 rounded-full
               "></span>
-            </label>
+            </div>
             <NotificationMenu />
           </div>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
           <div class="dropdown dropdown-end">
-            <label tabindex="0" class="bg-transparent border-0 relative">
+            <div tabindex="0" class="bg-transparent border-0 relative">
               <img src="../assets/images/notification.svg" class="w-4 mr-3"/>
               <span class="
                 absolute
@@ -116,12 +114,12 @@
                 bg-leny-cyan-400
                 rounded-full
               "></span>
-            </label>
+            </div>
             <NotificationMenu />
           </div>
-          <label for="my-modal-4" class="modal-button">
+          <div for="my-modal-4" class="modal-button">
             <img src="../assets/images/hamburger.svg" loading="lazy" role="presentation">
-          </label>
+          </div>
         </div>
       </div>
     </div>
@@ -139,6 +137,12 @@ export default {
     MobileMenu,
     LanguageMenu,
     NotificationMenu
+  },
+  props: {
+    activePage: {
+      type: String,
+      default: ""
+    },
   },
   data: () => {
     return {
@@ -176,6 +180,7 @@ export default {
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
+    window.addEventListener("click", console.warn('olaaaaaa'));
   },
   methods: {
     handleScroll() {

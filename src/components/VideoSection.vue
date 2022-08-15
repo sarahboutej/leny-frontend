@@ -1,6 +1,6 @@
 <template>
   <section class="video-section-wrapper my-12">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
       <h1 class="
           section-title
           text-center text-2xl md:text-h1xl text-leny-blue-800
@@ -61,7 +61,7 @@
               <p class="text-sm text-leny-gray-700 font-extralight text-center">You will have the opportunity to monetize a share of your advertising inserts. Paid partnerships will be offered: mortgage brokers, architects, decorators, carpenters, hunters, diagnosticians, insurers, etc.</p>
             </div>
             <div class="col-end-2 pt-7">
-              <img src="../assets/images/image-card.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl hidden md:flex" />
+              <img src="../assets/images/image-card-3.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl hidden md:flex" />
               <img src="../assets/images/image_mobile_3.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl flex md:hidden" />
             </div>
           </div>

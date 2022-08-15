@@ -1,7 +1,7 @@
 <template>
-  <Header />
+  <Header :active-page="'subscription'" />
   <section class="mt-[5.625rem] pt:4 md:pt-14 pb-14 md:pb-24 px-4 lg:px-0">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
       <div class="section-title mb-6 md:mb-20">
         <h1 class="text-h2xl md:text-h1xl text-leny-blue-800 font-medium text-center">
           A solution for every need

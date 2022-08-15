@@ -1,8 +1,8 @@
 <template>
   <section class="py-14 bg-leny-blue-900">
-    <div class="container mx-auto px-4">
-      <div class="grid md:grid-cols-5 grid-rows-1 gap-4 items-center">
-        <div class="md:col-start-1 md:col-end-3 text-center md:text-left mb-6 md:mb-0">
+    <div class="container mx-auto">
+      <div class="flex items-center justify-between">
+        <div class="text-center md:text-left mb-6 md:mb-0 w-1/2">
           <h2 class="text-2xl md:text-h2xl uppercase text-white font-medium">
             Receive our <span class="text-leny-cyan-400">new properties</span>
           </h2>
@@ -11,13 +11,12 @@
             real estate market
           </p>
         </div>
-        <div class="md:col-start-3 md:col-end-6 md:space-x-3 lg:space-x-6">
+        <div class="w-1/2 flex md:space-x-3 lg:space-x-6">
           <input class="
               placeholder:text-xs placeholder:text-slate-400
               bg-white
               w-full
-              md:w-3/5
-              xl:w-3/4
+              md:w-8/12
               border border-slate-300
               rounded-full
               py-3
@@ -30,9 +29,11 @@
               focus:ring-1
               sm:text-sm" placeholder="Your mail..." type="email" name="myEmail" />
           <a href="#" class="
+              flex-auto
+              justify-center
               py-3
               px-8
-              lg:px-12
+              lg:px-4
               mt-5 block w-1/2 mx-auto
               md:mt-0 md:inline md:w-24 md:mx-0
               text-center

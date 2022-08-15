@@ -1,12 +1,12 @@
 <template>
-  <Header />
+  <Header :active-page="'contact'" />
   <section class="banner-wrapper mt-[5.625rem] bg-contact-banner bg-no-repeat bg-cover bg-center">
-    <div class="container mx-auto px-4 h-52 md:h-80 flex flex-col align-center justify-center">
+    <div class="container mx-auto h-52 md:h-80 flex flex-col align-center justify-center">
       <h1 class="text-white text-h2xl md:text-h1xl uppsercase text-center font-medium">Contact Us</h1>
     </div>
   </section>
   <section class="contact-container py-14">
-    <div class="container mx-auto px-4">
+    <div class="container mx-auto">
       <div class="grid md:grid-cols-5 grid-rows-1 gap-6">
         <div class="md:col-start-1 md:col-end-3">
           <p class="text-2xl font-medium text-leny-blue-800 pb-5 mb-6">
