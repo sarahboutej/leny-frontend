@@ -1,19 +1,19 @@
 <template>
   <section class="py-14 bg-leny-blue-900">
     <div class="container mx-auto">
-      <div class="flex items-center justify-between">
-        <div class="text-center md:text-left mb-6 md:mb-0 w-1/2">
+      <div class="block md:flex items-center justify-between">
+        <div class="text-center md:text-left mb-6 md:mb-0 w-full md:w-1/2">
           <h2 class="text-2xl md:text-h2xl uppercase text-white font-medium">
             Receive our <span class="text-leny-cyan-400">new properties</span>
           </h2>
-          <p class="mb-0 text-white text-sm">
+          <p class="mb-0 text-white text-sm mt-1.5 font-normal">
             Sign up to stay up to date and receive the latest properties on the
             real estate market
           </p>
         </div>
-        <div class="w-1/2 flex md:space-x-3 lg:space-x-6">
+        <div class="w-full md:w-1/2 block md:flex md:space-x-3 lg:space-x-6">
           <input class="
-              placeholder:text-xs placeholder:text-slate-400
+              placeholder:text-sm placeholder:text-slate-400
               bg-white
               w-full
               md:w-8/12
@@ -38,7 +38,7 @@
               md:mt-0 md:inline md:w-24 md:mx-0
               text-center
               font-regular
-              text-xs text-white
+              text-sm text-white
               bg-leny-cyan-400
               rounded-full
               border border-leny-cyan-400

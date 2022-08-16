@@ -1,13 +1,11 @@
 <template>
   <section>
-    <div class="grid grid-cols-7 min-h-screen items-center sm:gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen items-center sm:gap-4">
       <div class="
-          sm:flex
+          md:flex
           items-center
           justify-center
-          sm:min-h-screen
-          col-start-1 col-end-8
-          sm:col-start-1 sm:col-end-4
+          md:min-h-screen
           bg-dark-login-image bg-center bg-no-repeat bg-cover
         ">
         <div class="lg:w-4/5 py-12 px-4 lg:px-0 lg:py-0">
@@ -30,9 +28,7 @@
         </div>
       </div>
       <div class="
-          col-start-1 col-end-8
-          sm:col-start-4 sm:col-end-8
-          sm:min-h-screen
+          md:min-h-screen
           flex flex-col
           items-center
           justify-center
@@ -45,7 +41,7 @@
           sm:pl-0
           py-6 sm:py-0
         ">
-        <img src="../assets/images/full_logo.png" alt="" class="w-22 mx-auto mb-3" />
+        <img src="../assets/images/full_logo.png" alt="" class="w-20 mx-auto mb-3" />
         <p class="
             uppercase
             text-sm
@@ -86,7 +82,7 @@
                 bg-white
                 rounded-full
                 py-3
-                sm:py-4
+                md:py-4
                 pl-11
                 pr-3
                 mb-4
@@ -96,7 +92,7 @@
                 focus:border-sky-500
                 focus:ring-sky-500
                 focus:ring-1
-                sm:text-sm
+                md:text-sm
               " placeholder="Username..." type="text" name="myUserName" />
           </div>
           <div class="relative">
@@ -130,7 +126,7 @@
                 focus:border-sky-500
                 focus:ring-sky-500
                 focus:ring-1
-                sm:text-sm
+                md:text-sm
               " placeholder="Email..." type="email" name="myEmail" />
           </div>
           <div class="relative mb-7">
@@ -164,7 +160,7 @@
                 focus:border-sky-500
                 focus:ring-sky-500
                 focus:ring-1
-                sm:text-sm
+                md:text-sm
               " placeholder="Password..." type="password" name="myPassword" />
           </div>
           <a href="/payment" class="

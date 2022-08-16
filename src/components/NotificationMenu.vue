@@ -1,19 +1,19 @@
 <template>
-  <div tabindex="0" class="dropdown-content shadow bg-white rounded-box w-96 min-h-notif">
-    <div v-if="!showAlertSetting">
+  <div tabindex="0" class="dropdown-content shadow bg-white rounded-box w-72 md:w-96 min-h-notif">
+    <div v-show="!showAlertSetting">
       <p class="text-base font-medium text-leny-blue-800 pb-2 pt-4 mx-6 before:leny-gray-700 before:border-leny-blue-800 relative before:w-9 before:border-b-2 before:absolute before:bottom-0 before:inset-x-0 mb-5"> Notification </p>
       <ul>
         <notification-item v-for="(item,index) in notifications" :key="index" :text="item.text" :image="item.image" :time="item.time" :read="item.read" /> 
       </ul>
       <div class="bg-leny-light-gray text-center rounded-b-3xl py-3.5">
-        <a class="flex items-center space-x-1 justify-center cursor-pointer" @click="showAlertSetting = !showAlertSetting">
+        <a  id="notifContent" class="flex items-center space-x-1 justify-center cursor-pointer" @click="showAlertSetting = !showAlertSetting">
           <img src="../assets/images/alert_notification_blue.svg" loading="lazy" role="presentation">
           <span class="text-sm text-leny-cyan-400">Set Alert </span>
           <img src="../assets/images/arrows.svg" loading="lazy" role="presentation">
         </a>
       </div>
     </div>
-    <div v-else>
+    <div  v-show="showAlertSetting">
       <p class="text-base font-medium text-leny-blue-800 pb-2 pt-4 mx-6 before:leny-gray-700 before:border-leny-blue-800 relative before:w-9 before:border-b-2 before:absolute before:bottom-0 before:inset-x-0 mb-5"> Choose frequency </p>
       <div class="mx-6">
         <div class="flex mb-6 space-x-8">

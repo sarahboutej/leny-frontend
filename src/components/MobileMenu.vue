@@ -1,16 +1,16 @@
 <template>
   <!-- Put this part before </body> tag -->
-    <input type="checkbox" id="my-modal-4" class="modal-toggle" />
-    <label for="my-modal-4" class="modal cursor-pointer">
-      <label class="modal-box relative self-start mt-6" for="">
+    <input type="checkbox" id="menuModal" class="modal-toggle w-6 h-6 ml-3 right-4" />
+    <label for="menuModal" class="modal cursor-pointer">
+      <label class="modal-box relative self-start mt-6 bg-white" for="">
         <div class="flex items-center justify-between">
-          <div class="dropdown">
-             <label tabindex="0" class="bg-transparent border-0">
-                <img src="../assets/images/language.svg" />
-              </label>
-              <LanguageMenu />
+          <div id="languageMobileDropdown" class="dropdown bg-white">
+             <div tabindex="0" class="bg-transparent border-0"  @click="languageMobileOpened = !languageMobileOpened">
+                 <img :src="!languageMobileOpened && require('../assets/images/language.svg')  || require('../assets/images/languageSelected_icon.svg')" />
+              </div>
+              <LanguageMenu v-if="languageMobileOpened" />
           </div>
-          <label for="my-modal-4" class="btn-lg cursor-pointer absolute right-2 top-2">✕</label>
+          <label for="menuModal" class="btn-lg cursor-pointer absolute right-2 top-2">✕</label>
         </div>
 
         <p class="py-4 text-center mx-auto mt-6 space-y-5">
@@ -90,6 +90,19 @@ export default {
   name: "MobileMenu",
   components: {
     LanguageMenu
-  }
+  },
+  data: () => {
+    return {
+      languageMobileOpened: false
+    }
+  },
+    mounted() {
+    const parentHTML = document.getElementById('app');
+    parentHTML.addEventListener('click', (e) => {
+      if (!document.getElementById('languageMobileDropdown').contains(e.target)) {
+        this.languageMobileOpened = false;
+      }
+    });
+  },
 }
 </script>

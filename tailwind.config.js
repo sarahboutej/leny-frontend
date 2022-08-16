@@ -35,6 +35,7 @@ module.exports = {
         'leny-gray-600': '#848790',
         'leny-gray-500': '#B7BAC3',
         'leny-gray-400': '#CFD1D8',
+        'leny-gray-300': '#CED1D9',
         'leny-light-gray': '#F7F8FA',
         'leny-red-600': '#AC2318',
         'transparent': '#ffffff00',
@@ -58,6 +59,9 @@ module.exports = {
       height: {
         'video5' : '25.063rem',
       },
+      width: {
+        '75' : '18.75rem'
+      },
       minHeight: {
         'search': '49.5rem',
         'notif': '35rem'
@@ -79,7 +83,7 @@ module.exports = {
         slideIn: 'slideInRight 1.5s',
       },
       boxShadow: {
-        'test': '1.4em 0 rgba(255,255,255,1), 2.8em 0 rgba(255,255,255,1), 4.2em 0 rgba(255,255,255,1)'
+        'search-window': '1.4em 0 rgba(255,255,255,1), 2.8em 0 rgba(255,255,255,1), 4.2em 0 rgba(255,255,255,1)'
       }
     },
   },

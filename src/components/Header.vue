@@ -76,15 +76,15 @@
               transition
               duration-300
             ">Register</router-link>
-          <div class="dropdown dropdown-end mt-1">
-             <label tabindex="0" class="bg-transparent border-0">
-                <img src="../assets/images/language.svg" />
-              </label>
-              <LanguageMenu />
+          <div id="languageDropdown" class="dropdown dropdown-end">
+             <div tabindex="0" class="bg-white border-0" @click="languageOpened = !languageOpened">
+                <img :src="!languageOpened && require('../assets/images/language.svg')  || require('../assets/images/languageSelected_icon.svg')" />
+              </div>
+              <LanguageMenu v-if="languageOpened" />
           </div>
-          <div class="dropdown dropdown-end mt-1.5">
-            <div tabindex="0" class="bg-transparent border-0 relative">
-              <img src="../assets/images/notification.svg" />
+          <div id="notifDropdown" class="dropdown dropdown-end">
+            <div tabindex="0" class="bg-transparent border-0 relative"  @click="notificationsOpened = !notificationsOpened">
+              <img :src="!notificationsOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" />
               <span class="
                 absolute
                 top-0
@@ -96,14 +96,14 @@
                 rounded-full
               "></span>
             </div>
-            <NotificationMenu />
+            <NotificationMenu v-if="notificationsOpened" />
           </div>
         </div>
         <!-- Mobile menu button -->
         <div class="md:hidden flex items-center">
-          <div class="dropdown dropdown-end">
-            <div tabindex="0" class="bg-transparent border-0 relative">
-              <img src="../assets/images/notification.svg" class="w-4 mr-3"/>
+          <div id="notifMobileDropdown" class="dropdown dropdown-end">
+            <div tabindex="0" class="bg-transparent border-0 relative" @click="notificationsMobileOpened = !notificationsMobileOpened">
+              <img :src="!notificationsMobileOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" class="w-4"/>
               <span class="
                 absolute
                 top-0
@@ -115,16 +115,16 @@
                 rounded-full
               "></span>
             </div>
-            <NotificationMenu />
+            <NotificationMenu v-if="notificationsMobileOpened" />
           </div>
-          <div for="my-modal-4" class="modal-button">
+          <div for="menuModal" class="modal-button ml-4">
             <img src="../assets/images/hamburger.svg" loading="lazy" role="presentation">
           </div>
+          <MobileMenu />
         </div>
       </div>
     </div>
   </nav>
-  <MobileMenu />
 </template>
 
 <script>
@@ -146,6 +146,9 @@ export default {
   },
   data: () => {
     return {
+      notificationsOpened: false,
+      notificationsMobileOpened: false,
+      languageOpened: false,
       view: {
         atTopOfPage: true,
       },
@@ -180,7 +183,24 @@ export default {
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);
-    window.addEventListener("click", console.warn('olaaaaaa'));
+  },
+  mounted() {
+    const parentHTML = document.getElementById('app');
+    parentHTML.addEventListener('click', (e) => {
+      if (!document.getElementById('notifDropdown').contains(e.target)) {
+        this.notificationsOpened = false;
+      }
+    });
+    parentHTML.addEventListener('click', (e) => {
+      if (!document.getElementById('languageDropdown').contains(e.target)) {
+        this.languageOpened = false;
+      }
+    });
+    parentHTML.addEventListener('click', (e) => {
+      if (!document.getElementById('notifMobileDropdown').contains(e.target)) {
+        this.notificationsMobileOpened = false;
+      }
+    });
   },
   methods: {
     handleScroll() {

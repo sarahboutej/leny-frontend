@@ -6,7 +6,7 @@
           Take advantage of our tailor - made tool, In
           <span class="text-leny-cyan-400">your</span> image
         </h2>
-        <p class="text-base text-leny-gray-700 mb-0">
+        <p class="text-base text-leny-gray-700 mb-0 mt-3 font-normal">
           Features and settings designed for per professionals ion the real
           estate business
         </p>

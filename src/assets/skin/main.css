@@ -52,7 +52,7 @@
 @font-face {
   font-family: "Futura";
   src: url("../fonts/futura/futuraptbold.woff") format("woff"),
-       url("../fonts/futura/futuraptbook.woff2") format("woff2");
+       url("../fonts/futura/futuraptbold.woff2") format("woff2");
   font-weight: 700;
 }
 

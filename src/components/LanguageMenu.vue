@@ -1,5 +1,5 @@
 <template>
-  <div tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-28">
+  <div tabindex="0" class="dropdown-content menu p-2 bg-white shadow rounded-box w-28">
     <div class="form-control">
       <label class="label cursor-pointer">
         <span class="label-text ml-3 text-xs text-leny-gray-700">French</span>

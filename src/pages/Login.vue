@@ -1,16 +1,13 @@
 <template>
   <section>
-    <div class="grid grid-cols-7 min-h-screen items-center sm:gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 min-h-screen items-center sm:gap-4">
       <div class="
           hidden
-          sm:flex
+          md:flex
           min-h-screen
-          col-start-1 col-end-4
           bg-login-image bg-center bg-no-repeat bg-cover
         "></div>
       <div class="
-          col-start-1 col-end-8
-          sm:col-start-4 sm:col-end-8
           min-h-screen
           flex flex-col
           items-center
@@ -21,19 +18,19 @@
           pr-4
           lg:pr-0
           pl-4
-          sm:pl-0
+          md:pl-0
           bg-login-image
           bg-center
           bg-no-repeat
           bg-cover
-          sm:bg-white
-          sm:bg-login-sm
+          md:bg-white
+          md:bg-login-sm
         ">
-        <img src="../assets/images/full_logo.png" alt="" class="hidden sm:block w-22 mx-auto mb-3" />
-        <img src="../assets/images/white_full_logo.png" alt="" class="block sm:hidden w-22 mx-auto mb-3" />
+        <img src="../assets/images/full_logo.png" alt="" class="hidden md:block w-20 mx-auto mb-3" />
+        <img src="../assets/images/white_full_logo.png" alt="" class="block md:hidden w-22 mx-auto mb-3" />
         <p class="
             uppercase
-            text-sm sm:text-base text-white sm:text-leny-gray-800
+            text-sm md:text-base text-white md:text-leny-gray-800
             pb-5
             before:leny-gray-700 before:border-leny-gray-600
             relative
@@ -69,7 +66,7 @@
                 bg-white
                 rounded-full
                 py-3
-                sm:py-4
+                md:py-4
                 pl-11
                 pr-3
                 mb-4
@@ -79,7 +76,7 @@
                 focus:border-sky-500
                 focus:ring-sky-500
                 focus:ring-1
-                sm:text-sm
+                md:text-sm
               " placeholder="Username..." type="text" name="myUserName" />
           </div>
           <div class="relative mb-7">
@@ -103,7 +100,7 @@
                 bg-white
                 rounded-full
                 py-3
-                sm:py-4
+                md:py-4
                 pl-11
                 pr-3
                 mb-4
@@ -113,7 +110,7 @@
                 focus:border-sky-500
                 focus:ring-sky-500
                 focus:ring-1
-                sm:text-sm
+                md:text-sm
               " placeholder="Password..." type="password" name="myPassword" />
           </div>
           <a href="/" class="
@@ -132,7 +129,7 @@
               duration-300
             ">Login</a>
           <a href="#" class="
-              text-sm text-white sm:text-leny-blue-800
+              text-sm text-white md:text-leny-blue-800
               block
               mt-8
               underline underline-offset-1
@@ -140,13 +137,13 @@
         </form>
         <p class="
             signup
-            text-sm text-white sm:text-leny-gray-800
+            text-sm text-white md:text-leny-gray-800
             font-light
             absolute
             bottom-10
           ">
           Have an account?
-          <router-link to="/signup" class="text-white sm:text-leny-blue-800 font-medium">Sign up</router-link>
+          <router-link to="/search" class="text-white sm:text-leny-blue-800 font-medium">Sign up</router-link>
         </p>
       </div>
     </div>

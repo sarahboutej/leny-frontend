@@ -2,7 +2,7 @@
   <Header />
   <section class="mt-[5.625rem] pt-14 px-4 lg:px-0">
     <div class="container mx-auto">
-      <div class="section-title mb-20">
+      <div class="section-title mb-10">
         <h1 class="text-h2xl md:text-h1xl text-leny-blue-800 font-medium text-center">
           The best real estate search engine
         </h1>
@@ -14,20 +14,20 @@
   </section>
   <section>
     <div class="container mx-auto hidden md:block">
-      <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-test before:opacity-100">
-        <div class="flex justify-center px-4 py-8 bg-white">
+      <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-search-window before:opacity-100">
+        <div class="flex justify-center px-4 pt-8 bg-white">
           <div>
             <div class="row 2xl:px-10 pt-4">
               <div class="flex justify-between space-x-4">
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> &lt; 20,000 €/m² </span>
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> &lt; 20 m² </span>
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> &lt; 20,000 €/m² </span>
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> &lt; 20 m² </span>
-                <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20,000 €/m² </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20 m² </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20,000 €/m² </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20 m² </span>
+                <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
               </div>
             </div>
-            <div class="row px-6 2xl:px-10 py-8 2xl:py-14">
+            <div class="row px-6 2xl:px-10 py-8 2xl:py-8">
               <div class="grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-4">
                 <SearchCard v-for="(item, index) in cardItems" :key="index" :item-type="item.type" :item-title="item.title" :address="item.address" :image="item.image" :rooms="item.rooms" :bathroom="item.bathroom" :price="item.price" />
               </div>
@@ -40,7 +40,7 @@
   </section>
   <section class="block md:hidden pb-14 mx-4 md:mx-0">
     <div class="container mx-auto bg-top pb-8">
-      <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-test before:opacity-100">
+      <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-search-window before:opacity-100">
         <div class="flex justify-center px-4 py-8 bg-white">
           <div>
             <div class="flex justify-between space-x-4 px-8 mb-5">
