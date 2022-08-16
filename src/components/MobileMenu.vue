@@ -13,10 +13,11 @@
           <label for="menuModal" class="btn-lg cursor-pointer absolute right-2 top-2">✕</label>
         </div>
 
-        <p class="py-4 text-center mx-auto mt-6 space-y-5">
+        <p class="py-4 text-center mx-auto mt-6 space-y-3">
           <router-link to="/subscription_plan" class="
+                font-futura-ptbook
                 relative
-                px-2
+                px-4
                 pb-2
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
@@ -32,8 +33,9 @@
                 hover:before:mx-auto
               ">Subscription Plans</router-link>
           <router-link to="/contact" class="
+                font-futura-ptbook
                 relative
-                px-2
+                px-4
                 pb-2
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
@@ -51,9 +53,9 @@
         </p>
         <p class="text-center mx-auto mt-4 space-x-6">
           <router-link to="/login" class="
+              font-futura-ptbook
               py-2
-              px-4
-              w-24
+              px-8
               text-center
               font-regular
               text-sm text-white
@@ -66,9 +68,9 @@
               duration-300
             ">Login</router-link>
           <router-link to="/search" class="
+              font-futura-ptbook
               py-2
-              px-4
-              w-24
+              px-8
               text-center
               font-regular
               text-sm text-white

@@ -1,18 +1,8 @@
 <template>
-  <div tabindex="0" class="dropdown-content menu p-2 bg-white shadow rounded-box w-28">
-    <div class="form-control">
-      <label class="label cursor-pointer">
-        <span class="label-text ml-3 text-xs text-leny-gray-700">French</span>
-        <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
-      </label>
-    </div>
-    <div class="form-control">
-      <label class="label cursor-pointer">
-        <span class="label-text ml-3 text-xs text-leny-gray-700">English</span>
-        <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
-      </label>
-    </div>
-  </div>
+  <ul tabindex="0" class="dropdown-content menu p-2 bg-white shadow rounded-box w-28 font-futura-ptbook">
+    <li><a class="text-xs text-leny-gray-700 block pb-2">French</a></li>
+    <li><a class="text-xs text-leny-gray-700 block pb-2">English</a></li>
+  </ul>
 </template>
 <script>
 export default {

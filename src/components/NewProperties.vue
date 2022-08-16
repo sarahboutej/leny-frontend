@@ -3,10 +3,10 @@
     <div class="container mx-auto">
       <div class="block md:flex items-center justify-between">
         <div class="text-center md:text-left mb-6 md:mb-0 w-full md:w-1/2">
-          <h2 class="text-2xl md:text-h2xl uppercase text-white font-medium">
+          <h2 class="text-2xl md:text-h2xl uppercase text-white font-futura-ptmedium">
             Receive our <span class="text-leny-cyan-400">new properties</span>
           </h2>
-          <p class="mb-0 text-white text-sm mt-1.5 font-normal">
+          <p class="mb-0 text-white text-sm mt-1.5 font-futura-ptbook">
             Sign up to stay up to date and receive the latest properties on the
             real estate market
           </p>
@@ -15,6 +15,7 @@
           <input class="
               placeholder:text-sm placeholder:text-slate-400
               bg-white
+              font-futura-ptlight
               w-full
               md:w-8/12
               border border-slate-300
@@ -30,6 +31,7 @@
               sm:text-sm" placeholder="Your mail..." type="email" name="myEmail" />
           <a href="#" class="
               flex-auto
+              font-futura-ptbook
               justify-center
               py-3
               px-8

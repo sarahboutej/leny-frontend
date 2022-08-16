@@ -15,7 +15,7 @@
             <router-link to="/subscription_plan" class="
                 relative
                 px-2
-                font-normal
+                font-futura-ptbook
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
                 transition
@@ -31,7 +31,7 @@
             <router-link to="/contact" class="
                 relative
                 px-2
-                font-normal
+                font-futura-ptbook
                 text-sm text-leny-gray-700
                 hover:text-leny-blue-800
                 transition
@@ -53,7 +53,7 @@
               px-4
               w-24
               text-center
-              font-normal
+              font-futura-ptbook
               text-sm text-white
               bg-leny-blue-800
               rounded-full
@@ -67,7 +67,7 @@
               px-4
               w-24
               text-center
-              font-normal
+              font-futura-ptbook
               text-sm text-white
               bg-leny-cyan-400
               rounded-full

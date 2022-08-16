@@ -10,18 +10,16 @@
 
 /** Light **/
 @font-face {
-  font-family: "Future";
-  src: url("../fonts/futura/futuraptlight.woff") format("woff"), 
-       url("../fonts/futura/futuraptlight.woff2") format("woff2");
-  font-weight: 300;
+  font-family: "futura_ptlight";
+  src: url("../fonts/futura/futura-pt-light.woff") format("woff"), 
+       url("../fonts/futura/futura-pt-light.woff2") format("woff2");
 }
 
 /** Medium **/
 @font-face {
-  font-family: "Futura";
+  font-family: "futura_ptmedium";
   src: url("../fonts/futura/futuraptmedium.woff") format("woff"),
        url("../fonts/futura/futuraptmedium.woff2") format("woff2");
-  font-weight: 500;
 }
 
 /** Heavy **/
@@ -29,23 +27,20 @@
   font-family: "Futura";
   src: url("../fonts/futura/futuraptheavy.woff") format("woff"),
        url("../fonts/futura/futuraptheavy.woff2") format("woff2");
-  font-weight: 900;
 }
 
 /** Demi **/
 @font-face {
-  font-family: "Futura";
+  font-family: "futura_ptdemi";
   src: url("../fonts/futura/futuraptdemi.woff") format("woff"),
        url("../fonts/futura/futuraptdemi.woff2") format("woff2");
-  font-weight: 600;
 }
 
 /** Book **/
 @font-face {
-  font-family: "Futura";
+  font-family: "futura_ptbook";
   src: url("../fonts/futura/futuraptbook.woff") format("woff"),
        url("../fonts/futura/futuraptbook.woff2") format("woff2");
-  font-weight: 400;
 }
 
 /** Bold **/
@@ -53,7 +48,6 @@
   font-family: "Futura";
   src: url("../fonts/futura/futuraptbold.woff") format("woff"),
        url("../fonts/futura/futuraptbold.woff2") format("woff2");
-  font-weight: 700;
 }
 
 

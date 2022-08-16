@@ -22,12 +22,17 @@ module.exports = {
       },
       fontFamily: {
         'futura': ["Futura"],
+        'futura-ptlight': ["futura_ptlight"],
+        'futura-ptmedium': ["futura_ptmedium"],
+        'futura-ptbook' : ["futura_ptbook"],
+        'futura-ptdemi' : ["futura_ptdemi"]
       },
       colors: {
         'leny-blue-900': '#0E1D44',
         'leny-blue-800': '#112C61',
         'leny-blue-700': '#1C3571',
         'leny-blue-600': '#008E9D',
+        'leny-blue-500': '#182C5E',
         'leny-cyan-500': '#3E8C9B',
         'leny-cyan-400': '#009EB5',
         'leny-gray-800': '#6D7078',
@@ -60,7 +65,9 @@ module.exports = {
         'video5' : '25.063rem',
       },
       width: {
-        '75' : '18.75rem'
+        '75' : '18.75rem',
+        '84'   : '20.375rem',
+        '22' : '5.375rem'
       },
       margin: {
         '4.5' : '1.125rem'

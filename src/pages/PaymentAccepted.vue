@@ -32,13 +32,14 @@
         <img src="../assets/images/full_logo.png" alt="" class="hidden sm:block w-22 mx-auto mb-3" />
         <img src="../assets/images/white_full_logo.png" alt="" class="block sm:hidden w-22 mx-auto mb-3" />
         <p class="
+            font-futura-ptbook
             uppercase
             text-sm sm:text-base text-white sm:text-leny-gray-800
             pb-5
-            before:leny-gray-700 before:border-leny-gray-600
+            before:leny-gray-700 before:border-white md:before:border-leny-gray-600
             relative
             before:w-11
-            before:border-b-2
+            before:border-b
             before:absolute
             before:bottom-0
             before:inset-x-0
@@ -49,10 +50,10 @@
           Welcome to leny for real estate
         </p>
         <div>
-          <p class="text-h2xl text-leny-cyan-400 sm:text-leny-blue-800 font-medium mb-6">Accepted</p>
-          <p class="text-sm sm:text-base text-white sm:text-leny-gray-800 font-medium mb-3">Payment submitted successfully!</p>
-          <p class="text-xs sm:text-sm text-white sm:text-leny-gray-800">“Please check your mail for confirmation”</p>
-          <a href="#" class="
+          <p class="text-h2xl text-leny-cyan-400 sm:text-leny-blue-800 font-futura-ptmedium mb-6">Accepted</p>
+          <p class="text-sm sm:text-base text-white sm:text-leny-gray-800 font-futura-ptmedium mb-3">Payment submitted successfully!</p>
+          <p class="text-xs sm:text-sm text-white sm:text-leny-gray-800 font-futura-ptbook">“Please check your mail for confirmation”</p>
+          <a href="#" class=" font-futura-ptbook
               text-sm text-leny-cyan-400 sm:text-leny-blue-800 
               block
               mt-8

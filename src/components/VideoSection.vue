@@ -2,10 +2,10 @@
   <section class="video-section-wrapper my-12">
     <div class="container mx-auto">
       <h1 class="
+          font-futura-ptdemi
           section-title
           text-center text-2xl md:text-h1xl text-leny-blue-900
           uppercase
-          font-semibold
           mb-3
         ">
         Retention is the new growth
@@ -13,7 +13,7 @@
       <p class="
           section-desc
           text-sm text-leny-gray-700
-          font-extralight
+          font-futura-ptlight
           text-center
         ">
         Generate leads from buyers, sellers, investors, lessors etc., in an
@@ -32,8 +32,8 @@
         <div class="card-wrapper mt-6 md:mt-0">
           <div class="flex flex-col">
             <div class="col-end-2">
-              <h2 class="text-leny-blue-900 font-medium text-2xl md:text-h2xl text-center mb-3.5">Boost your acquisition channel</h2>
-              <p class="text-sm text-leny-gray-700 font-light text-center">Attract new users by helping them find their future accommodation thanks to an alert personalized, real-time, news advertisements placed online.</p>
+              <h2 class="text-leny-blue-900 font-futura-ptmedium text-2xl md:text-h2xl text-center mb-3.5">Boost your acquisition channel</h2>
+              <p class="text-sm text-leny-gray-700 font-futura-ptlight text-center">Attract new users by helping them find their future accommodation thanks to an alert personalized, real-time, news advertisements placed online.</p>
             </div>
             <div class="col-end-2 pt-7">
               <img src="../assets/images/image-card.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl hidden md:flex" />
@@ -48,17 +48,17 @@
               <img src="../assets/images/image_mobile_2.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl flex md:hidden" />
             </div>
             <div class="col-end-2 pt-0 md:pt-7 order-first md:order-last mb-7 md:mb-0">
-              <h2 class="text-leny-blue-900 font-medium text-2xl md:text-h2xl text-center mb-3.5">Increase your conversions</h2>
-              <p class="text-sm text-leny-gray-700 font-light text-center">Your daily presence as well as that of your partners between ads and in messaging of your users, throughout their search real estate.</p>
-              <p class="text-sm text-leny-gray-700 font-extralight text-center mt-3.5">Offer your services, <a href="#" class="text-leny-blue-600 font-normal">at the appropriate time</a></p>
+              <h2 class="text-leny-blue-900 font-futura-ptmedium text-2xl md:text-h2xl text-center mb-3.5">Increase your conversions</h2>
+              <p class="text-sm text-leny-gray-700 font-futura-ptlight text-center">Your daily presence as well as that of your partners between ads and in messaging of your users, throughout their search real estate.</p>
+              <p class="text-sm text-leny-gray-700 font-futura-ptlight text-center mt-3.5">Offer your services, <a href="#" class="text-leny-blue-600 font-futura-ptbook">at the appropriate time</a></p>
             </div>
           </div>
         </div>
         <div class="card-wrapper mt-6 md:mt-0">
           <div class="flex flex-col">
             <div class="col-end-2">
-              <h2 class="text-leny-blue-900 font-medium text-2xl md:text-h2xl text-center mb-3.5">Manage your advertising inserts</h2>
-              <p class="text-sm text-leny-gray-700 font-light text-center">You will have the opportunity to monetize a share of your advertising inserts. Paid partnerships will be offered: mortgage brokers, architects, decorators, carpenters, hunters, diagnosticians, insurers, etc.</p>
+              <h2 class="text-leny-blue-900 font-futura-ptmedium text-2xl md:text-h2xl text-center mb-3.5">Manage your advertising inserts</h2>
+              <p class="text-sm text-leny-gray-700 font-futura-ptlight text-center">You will have the opportunity to monetize a share of your advertising inserts. Paid partnerships will be offered: mortgage brokers, architects, decorators, carpenters, hunters, diagnosticians, insurers, etc.</p>
             </div>
             <div class="col-end-2 pt-7">
               <img src="../assets/images/image-card-3.png" alt="put your alternative text here to enhance your application accessibility" class="drop-shadow-xl hidden md:flex" />

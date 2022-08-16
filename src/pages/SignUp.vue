@@ -9,16 +9,16 @@
           bg-dark-login-image bg-center bg-no-repeat bg-cover
         ">
         <div class="lg:w-4/5 py-12 px-4 lg:px-0 lg:py-0">
-          <h1 class="text-white text-h2xl lg:text-h1xl font-medium mb-5">
+          <h1 class="text-white text-h2xl lg:text-h1xl font-futura-ptmedium mb-5">
             Your clients will be able to search all real estate websites at once
           </h1>
-          <h2 class="text-white text-2xl lg:text-h2xl font-medium mb-3">
+          <h2 class="text-white text-2xl lg:text-h2xl font-futura-ptmedium mb-3">
             14 day free trial
           </h2>
-          <h2 class="text-white text-2xl lg:text-h2xl font-medium pb-6 border-b">
+          <h2 class="text-white text-2xl lg:text-h2xl font-futura-ptmedium pb-6 border-b">
             Without engagement
           </h2>
-          <ul class="mt-3 font-normal">
+          <ul class="mt-3 font-futura-ptbook">
             <li class="text-subtitle lg:text-2xl text-white">- 900+ ad sources</li>
             <li class="text-subtitle lg:text-2xl text-white">- Unlimited email sends</li>
             <li class="text-subtitle lg:text-2xl text-white">- Selection of ads in a basket</li>
@@ -43,6 +43,7 @@
         ">
         <img src="../assets/images/full_logo.png" alt="" class="w-20 mx-auto mb-3" />
         <p class="
+            font-futura-ptbook
             uppercase
             text-sm
             sm:text-base
@@ -60,7 +61,7 @@
           ">
           Welcome to leny for real estate
         </p>
-        <form action="" class="w-full lg:w-1/2">
+        <form action="" class="w-full lg:w-84">
           <div class="relative">
             <div class="
                 flex
@@ -68,21 +69,22 @@
                 inset-y-0
                 left-0
                 items-center
-                pl-3
+                pl-4
                 pointer-events-none
                 w-full
                 mb-4
               ">
-              <svg class="w-6 h-6 text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-4 h-4  text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
               </svg>
             </div>
             <input class="
                 placeholder:text-xs placeholder:text-slate-400
+                font-futura-ptlight
                 bg-white
                 rounded-full
                 py-3
-                md:py-4
+                md:py-2.5
                 pl-11
                 pr-3
                 mb-4
@@ -102,21 +104,22 @@
                 inset-y-0
                 left-0
                 items-center
-                pl-3
+                pl-4
                 pointer-events-none
                 w-full
                 mb-4
               ">
-              <svg class="w-6 h-6 text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-4 h-4  text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
               </svg>
             </div>
             <input class="
                 placeholder:text-xs placeholder:text-slate-400
+                font-futura-ptlight
                 bg-white
                 rounded-full
                 py-3
-                sm:py-4
+                md:py-2.5
                 pl-11
                 pr-3
                 mb-4
@@ -136,21 +139,22 @@
                 inset-y-0
                 left-0
                 items-center
-                pl-3
+                pl-4
                 pointer-events-none
                 w-full
                 mb-4
               ">
-              <svg class="w-6 h-6 text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <svg class="w-4 h-4  text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
               </svg>
             </div>
             <input class="
                 placeholder:text-xs placeholder:text-slate-400
+                font-futura-ptlight
                 bg-white
                 rounded-full
                 py-3
-                sm:py-4
+                md:py-2.5
                 pl-11
                 pr-3
                 mb-4
@@ -164,6 +168,7 @@
               " placeholder="Password..." type="password" name="myPassword" />
           </div>
           <a href="/payment" class="
+              font-futura-ptbook
               py-3
               px-12
               w-24
@@ -181,6 +186,7 @@
               duration-300
             ">Sign Up</a>
           <p class="
+              font-futura-ptbook
               signup
               text-sm
             text-leny-gray-800
@@ -188,7 +194,7 @@
               font-light
             ">
             If you have an account?
-            <router-link to="/login" class="text-leny-blue-800 font-medium">
+            <router-link to="/login" class="text-leny-blue-800 font-futura-ptbook">
               Login
             </router-link>
           </p>

@@ -1,12 +1,12 @@
 <template>
   <Header />
-  <section class="mt-[5.625rem] pt-14 px-4 lg:px-0">
+  <section class="mt-[5.5rem] pt-14 px-4 lg:px-0">
     <div class="container mx-auto">
       <div class="section-title mb-10">
-        <h1 class="text-h2xl md:text-h1xl text-leny-blue-800 font-medium text-center">
+        <h1 class="text-h2xl md:text-h1xl text-leny-blue-800 font-futura-ptmedium text-center">
           The best real estate search engine
         </h1>
-        <p class="text-leny-gray-700 text-sm md:text-2xl text-center font-normal">
+        <p class="text-leny-gray-700 text-sm md:text-2xl text-center font-futura-ptbook">
           Browse more than 900 real estate ad platforms at once from a dashboard centralizing all your searches
         </p>
       </div>
@@ -15,10 +15,10 @@
   <section>
     <div class="container mx-auto hidden md:block">
       <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-search-window before:opacity-100">
-        <div class="flex justify-center px-4 pt-8 bg-white">
+        <div class="flex justify-center pt-8 bg-white">
           <div>
             <div class="row 2xl:px-10 pt-4">
-              <div class="flex justify-between space-x-4">
+              <div class="flex justify-between space-x-4 font-futura-ptlight">
                 <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20,000 €/m² </span>
                 <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> &lt; 20 m² </span>
                 <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
@@ -27,15 +27,15 @@
                 <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-6 text-leny-gray-800"> JouÉ-lÈs-tours </span>
               </div>
             </div>
-            <div class="row px-6 2xl:px-10 py-8 2xl:py-8">
-              <div class="grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-4">
+            <div class="row px-6 2xl:px-5 py-8 2xl:py-8">
+              <div class="grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-3">
                 <SearchCard v-for="(item, index) in cardItems" :key="index" :item-type="item.type" :item-title="item.title" :address="item.address" :image="item.image" :rooms="item.rooms" :bathroom="item.bathroom" :price="item.price" />
               </div>
             </div>
           </div>
         </div>
       </div>
-       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</router-link>
+       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</router-link>
     </div>
   </section>
   <section class="block md:hidden pb-14 mx-4 md:mx-0">
@@ -43,15 +43,15 @@
       <div class="mockup-window shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border rounded-3xl bg-leny-blue-800 w-full before:shadow-search-window before:opacity-100">
         <div class="flex justify-center px-4 py-8 bg-white">
           <div>
-            <div class="flex justify-between space-x-4 px-8 mb-5">
-              <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
-              <span class="text-xs rounded-full bg-leny-gray-500 py-2 px-10 text-leny-gray-800"> &lt; 20 m² </span>
+            <div class="flex justify-between space-x-4 px-8 mb-5 font-futura-ptlight">
+              <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
+              <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-10 text-leny-gray-800"> &lt; 20 m² </span>
             </div>
             <SearchCard class="w-10/12 mx-auto" :item-type="cardItems[0].type" :item-title="cardItems[0].title" :address="cardItems[0].address" :image="cardItems[0].image" :rooms="cardItems[0].rooms" :bathroom="cardItems[0].bathroom" :price="cardItems[0].price" />
           </div>
         </div>
       </div>
-       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</router-link>
+       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Try For Free</router-link>
     </div>
   </section>
   <Footer />
