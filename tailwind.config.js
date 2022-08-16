@@ -62,6 +62,9 @@ module.exports = {
       width: {
         '75' : '18.75rem'
       },
+      margin: {
+        '4.5' : '1.125rem'
+      },
       minHeight: {
         'search': '49.5rem',
         'notif': '35rem'
