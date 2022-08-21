@@ -3,7 +3,7 @@
   <!-- Put this part before </body> tag -->
   <input type="checkbox" id="delete-modal" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box py-8 relative">
+    <div class="modal-box bg-white py-8 relative">
       <label for="delete-modal" class="btn btn-sm btn-circle absolute right-4 top-4 bg-leny-gray-500 border-0 hover:bg-leny-cyan-400">✕</label>
       <h3 class="text-2xl font-futura-ptmedium text-leny-cyan-400 text-center my-6">Are you sure delete this agent?</h3>
       <div class="modal-action flex space-x-4 justify-center mt-3 mb-8">

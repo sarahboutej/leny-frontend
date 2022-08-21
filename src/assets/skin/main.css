@@ -23,6 +23,14 @@
   }
 }
 
+.table-zebra tbody tr:nth-child(2n) th, .table-zebra tbody tr:nth-child(2n) td {
+  @apply bg-leny-light-gray;
+}
+
+.table tr.hover:hover th, .table tr.hover:hover td, .table tr.hover:nth-child(2n):hover th, .table tr.hover:nth-child(2n):hover td {
+  @apply bg-leny-light-gray;
+}
+
 /** Light **/
 @font-face {
   font-family: "futura_ptlight";

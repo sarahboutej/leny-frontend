@@ -2,7 +2,7 @@
 <template>
   <input type="checkbox" id="assign-agent" class="modal-toggle" />
   <div class="modal">
-    <div class="modal-box w-86 px-9 overflow-hidden">
+    <div class="modal-box w-86 px-9 bg-white overflow-hidden">
       <p class="text-2xl font-futura-ptmedium text-leny-cyan-400 pb-2 before:leny-gray-700 before:border-leny-gray-400 relative before:w-11 before:border-b before:absolute before:bottom-0 before:inset-x-0 mb-4">
         Choose Agent
       </p>
