@@ -1,0 +1,6 @@
+<svg id="user_icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+  <g id="person">
+    <rect id="Rectangle_1652" data-name="Rectangle 1652" width="16" height="16" fill="#6c7079" opacity="0"/>
+    <path id="Path_128" data-name="Path 128" d="M9.62,8.28A2.64,2.64,0,1,0,6.98,5.64,2.64,2.64,0,0,0,9.62,8.28Zm0-3.96A1.32,1.32,0,1,1,8.3,5.64,1.32,1.32,0,0,1,9.62,4.32Zm0,5.28A4.62,4.62,0,0,0,5,14.221a.66.66,0,0,0,1.32,0,3.3,3.3,0,1,1,6.6,0,.66.66,0,0,0,1.32,0A4.62,4.62,0,0,0,9.62,9.6Z" transform="translate(-1.7 -1.02)" fill="#6c7079"/>
+  </g>
+</svg>

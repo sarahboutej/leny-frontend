@@ -45,7 +45,6 @@
               rounded-full
               border border-leny-cyan-400
               hover:bg-transparent hover:text-leny-cyan-400
-              shadow-md
               transition
               duration-300
             ">Notify me</a>

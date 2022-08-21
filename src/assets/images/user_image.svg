@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="82" height="82" viewBox="0 0 82 82">
+  <g id="user_image" transform="translate(-490 -259)">
+    <circle id="Ellipse_27" data-name="Ellipse 27" cx="41" cy="41" r="41" transform="translate(490 259)" fill="#f7f8fa"/>
+    <g id="Layer_2" data-name="Layer 2" transform="translate(510.873 279.873)">
+      <g id="person" transform="translate(0 0)">
+        <rect id="Rectangle_1652" data-name="Rectangle 1652" width="41" height="41" transform="translate(0.127 0.128)" fill="#112c61" opacity="0"/>
+        <path id="Path_128" data-name="Path 128" d="M17.212,16.957a6.979,6.979,0,1,0-6.979-6.979,6.979,6.979,0,0,0,6.979,6.979Zm0-10.468a3.489,3.489,0,1,1-3.489,3.489A3.489,3.489,0,0,1,17.212,6.489Zm0,13.957A12.212,12.212,0,0,0,5,32.659a1.745,1.745,0,0,0,3.489,0,8.723,8.723,0,0,1,17.446,0,1.745,1.745,0,1,0,3.489,0A12.212,12.212,0,0,0,17.212,20.446Z" transform="translate(3.025 1.926)" fill="#112c61"/>
+      </g>
+    </g>
+  </g>
+</svg>

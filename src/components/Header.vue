@@ -1,13 +1,14 @@
 <template>
   <!-- Navbar goes here -->
-  <nav class="bg-white fixed w-full z-50 top-0" :class="{ scrolled: !view.atTopOfPage }">
+  <nav class="fixed w-full z-50 top-0" :class="[{ scrolled: !view.atTopOfPage && !isAgencyPage }, isAgencyPage && 'bg-leny-blue-900' || 'bg-white']">
     <div class="container mx-auto">
       <div class="flex justify-between items-center my-6">
         <div class="flex mr-5 flex-auto">
           <div>
             <!-- Website Logo -->
             <router-link to="/" class="flex items-center">
-              <img :src="view.atTopOfPage && require('../assets/images/logo.svg')  || require('../assets/images/logoblue_img.png')" />
+              <img v-if="isAgencyPage" src="../assets/images/logo_white.png" class="w-20" />
+              <img v-else :src="view.atTopOfPage && require('../assets/images/logo.svg')  || require('../assets/images/logoblue_img.png')" />
             </router-link>
           </div>
           <!-- Primary Navbar items -->
@@ -20,14 +21,12 @@
                 hover:text-leny-blue-800
                 transition
                 duration-300
-                hover:before:bg-leny-blue-800
                 hover:before:w-4
                 hover:before:h-px
                 hover:before:absolute
                 hover:before:-bottom-1
                 hover:before:inset-x-0
-                hover:before:mx-auto"
-                :class="activePage === 'subscription' && 'text-leny-blue-800 before:bg-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto'" >Subscription Plans</router-link>
+                hover:before:mx-auto" :class="[activePage === 'subscription' && 'text-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto' ,isAgencyPage && 'text-white hover:text-leny-cyan-400 before:bg-leny-cyan-400 hover:before:bg-leny-cyan-400' || 'text-leny-gray-700 hover:text-leny-blue-800 before:bg-leny-blue-800 hover:before:bg-leny-blue-800']">Subscription Plans</router-link>
             <router-link to="/contact" class="
                 relative
                 px-2
@@ -36,19 +35,26 @@
                 hover:text-leny-blue-800
                 transition
                 duration-300
-                hover:before:bg-leny-blue-800
                 hover:before:w-4
                 hover:before:h-px
                 hover:before:absolute
                 hover:before:-bottom-1
                 hover:before:inset-x-0
-                hover:before:mx-auto"
-               :class="activePage === 'contact' && 'text-leny-blue-800 before:bg-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto'">Contact Us</router-link>
+                hover:before:mx-auto" :class="[activePage === 'contact' && 'text-leny-blue-800 before:bg-leny-blue-800 before:w-4 before:h-px before:absolute before:-bottom-1 before:inset-x-0 before:mx-auto' ,isAgencyPage && 'text-white hover:text-leny-cyan-400 hover:before:bg-leny-cyan-400' || 'text-leny-gray-700 hover:text-leny-blue-800 hover:before:bg-leny-blue-800']">Contact Us</router-link>
           </div>
         </div>
         <!-- Secondary Navbar items -->
         <div class="hidden md:flex items-center space-x-3">
-          <router-link to="/login" class="
+          <div v-if="isAgencyPage" class="mr-2">
+            <div class="avatar placeholder items-center font-light">
+              <div class="bg-leny-cyan-400 text-white rounded-full w-8">
+                <span class="text-sm font-futura-ptbook">AA</span>
+              </div>
+              <span class="text-sm ml-2 text-white font-futura-ptlight">Company name</span>
+            </div>
+          </div>
+          <div v-else class="space-x-3">
+            <router-link to="/login" class="
               py-2
               px-4
               w-24
@@ -62,7 +68,7 @@
               transition
               duration-300
             ">Login</router-link>
-          <router-link to="/search" class="
+            <router-link to="/search" class="
               py-2
               px-4
               w-24
@@ -76,15 +82,18 @@
               transition
               duration-300
             ">Register</router-link>
+          </div>
           <div id="languageDropdown" class="dropdown dropdown-end">
-             <div tabindex="0" class="bg-white border-0" @click="languageOpened = !languageOpened">
-                <img :src="!languageOpened && require('../assets/images/language.svg')  || require('../assets/images/languageSelected_icon.svg')" />
-              </div>
-              <LanguageMenu v-if="languageOpened" />
+            <div tabindex="0" class="border-0" @click="languageOpened = !languageOpened">
+              <img v-if="isAgencyPage" :src="!languageOpened && require('../assets/images/language_white_icon.svg')  || require('../assets/images/languageSelected_icon.svg')" />
+              <img v-else :src="!languageOpened && require('../assets/images/language.svg')  || require('../assets/images/languageSelected_icon.svg')" />
+            </div>
+            <LanguageMenu v-if="languageOpened" />
           </div>
           <div id="notifDropdown" class="dropdown dropdown-end">
-            <div tabindex="0" class="bg-transparent border-0 relative"  @click="notificationsOpened = !notificationsOpened">
-              <img :src="!notificationsOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" />
+            <div tabindex="0" class="bg-transparent border-0 relative" @click="notificationsOpened = !notificationsOpened">
+               <img v-if="isAgencyPage" :src="!notificationsOpened && require('../assets/images/notification-white.png')  || require('../assets/images/notification_icon_selected.svg')" />
+              <img v-else :src="!notificationsOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" />
               <span class="
                 absolute
                 top-0
@@ -103,7 +112,7 @@
         <div class="md:hidden flex items-center">
           <div id="notifMobileDropdown" class="dropdown dropdown-end">
             <div tabindex="0" class="bg-transparent border-0 relative" @click="notificationsMobileOpened = !notificationsMobileOpened">
-              <img :src="!notificationsMobileOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" class="w-4"/>
+              <img :src="!notificationsMobileOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" class="w-4" />
               <span class="
                 absolute
                 top-0
@@ -129,19 +138,23 @@
 
 <script>
 import MobileMenu from "./MobileMenu.vue";
-import LanguageMenu from './LanguageMenu.vue';
-import NotificationMenu from './NotificationMenu.vue'
+import LanguageMenu from "./LanguageMenu.vue";
+import NotificationMenu from "./NotificationMenu.vue";
 export default {
   name: "HeaderItem",
   components: {
     MobileMenu,
     LanguageMenu,
-    NotificationMenu
+    NotificationMenu,
   },
   props: {
     activePage: {
       type: String,
-      default: ""
+      default: "",
+    },
+    isAgencyPage: {
+      type: Boolean,
+      default: () => false,
     },
   },
   data: () => {
@@ -185,19 +198,19 @@ export default {
     window.addEventListener("scroll", this.handleScroll);
   },
   mounted() {
-    const parentHTML = document.getElementById('app');
-    parentHTML.addEventListener('click', (e) => {
-      if (!document.getElementById('notifDropdown').contains(e.target)) {
+    const parentHTML = document.getElementById("app");
+    parentHTML.addEventListener("click", (e) => {
+      if (!document.getElementById("notifDropdown").contains(e.target)) {
         this.notificationsOpened = false;
       }
     });
-    parentHTML.addEventListener('click', (e) => {
-      if (!document.getElementById('languageDropdown').contains(e.target)) {
+    parentHTML.addEventListener("click", (e) => {
+      if (!document.getElementById("languageDropdown").contains(e.target)) {
         this.languageOpened = false;
       }
     });
-    parentHTML.addEventListener('click', (e) => {
-      if (!document.getElementById('notifMobileDropdown').contains(e.target)) {
+    parentHTML.addEventListener("click", (e) => {
+      if (!document.getElementById("notifMobileDropdown").contains(e.target)) {
         this.notificationsMobileOpened = false;
       }
     });

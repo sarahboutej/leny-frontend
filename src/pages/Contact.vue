@@ -36,22 +36,22 @@
           <form action="">
             <div class="relative">
               <label for="myName" class="text-leny-gray-800 text-xs md:text-sm font-futura-ptbook">Name</label>
-              <input class="placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="myName" name="myName" />
+              <input class="border-0 placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full h-9 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="myName" name="myName" />
             </div>
             <div class="relative">
               <label for="myEmail" class="text-leny-gray-800 text-xs md:text-sm font-futura-ptbook">Email</label>
-              <input class="placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="email" id="myEmail" name="myEmail" />
+              <input class="border-0 h-9 placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="email" id="myEmail" name="myEmail" />
             </div>
             <div class="relative">
               <label for="mySubject" class="text-leny-gray-800 text-xs md:text-sm font-futura-ptbook">Subject</label>
-              <input class="placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="mySubject" name="mySubject" />
+              <input class="border-0 h-9 placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="mySubject" name="mySubject" />
             </div>
             <div class="relative mb-8">
               <label for="myMessage" class="text-leny-gray-800 text-xs md:text-sm font-futura-ptbook">Message</label>
-              <textarea rows="6" class="placeholder:text-xs placeholder:text-slate-400 bg-white rounded-3xl py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="myMessage" name="myMessage" />
+              <textarea rows="6" class=" border-0 placeholder:text-xs placeholder:text-slate-400 bg-white rounded-3xl py-3 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" type="text" id="myMessage" name="myMessage" />
             </div>
             <p class="mx-auto md:mx-0 mb-0 text-center md:text-left font-futura-ptbook">
-              <a href="/" class="py-3 px-12 font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Send</a>
+              <router-link to="/" class="py-3 px-12 font-regular text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Send</router-link>
             </p>
           </form>
         </div>

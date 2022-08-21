@@ -21,7 +21,7 @@
               rounded-full
               border border-leny-blue-800
               hover:bg-transparent hover:text-leny-blue-800
-              shadow-md
+              
               transition
               duration-300">Try For Free</router-link>
         </div>

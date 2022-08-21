@@ -58,17 +58,15 @@
                 w-full
                 mb-4
               ">
-              <svg class="w-4 h-4 text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
-              </svg>
+              <img src="../assets/images/user_icon_fade.svg" alt="" loading="lazy" role="presentation">
             </div>
             <input class="
                 placeholder:text-xs placeholder:text-slate-400 
                 font-futura-ptlight
                 bg-white
                 rounded-full
-                py-3
-                md:py-2.5
+                border-0
+                h-10
                 pl-11
                 pr-3
                 mb-4
@@ -93,17 +91,15 @@
                 w-full
                 mb-4
               ">
-              <svg class="w-4 h-4 text-leny-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
-              </svg>
+              <img src="../assets/images/password.svg" alt="" loading="lazy" role="presentation">
             </div>
             <input class="
                 placeholder:text-xs placeholder:text-slate-400
                 font-futura-ptlight
                 bg-white
                 rounded-full
-                py-3
-                md:py-2.5
+                h-10
+                border-0
                 pl-11
                 pr-3
                 mb-4
@@ -116,7 +112,7 @@
                 md:text-sm
               " placeholder="Password..." type="password" name="myPassword" />
           </div>
-          <a href="/" class="
+          <router-link to="/" class="
               font-futura-ptbook
               py-3
               px-14
@@ -128,10 +124,9 @@
               rounded-full
               border border-leny-blue-800
               hover:bg-transparent hover:text-leny-blue-800
-              shadow-md
               transition
               duration-300
-            ">Login</a>
+            ">Login</router-link>
           <a href="#" class="
               font-futura-ptbook
               text-sm text-white md:text-leny-blue-800

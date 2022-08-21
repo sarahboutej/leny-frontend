@@ -79,6 +79,7 @@
               </svg>
             </div>
             <input class="
+                border-0
                 placeholder:text-xs placeholder:text-slate-400
                 font-futura-ptlight
                 bg-white
@@ -114,6 +115,7 @@
               </svg>
             </div>
             <input class="
+                border-0
                 placeholder:text-xs placeholder:text-slate-400
                 font-futura-ptlight
                 bg-white
@@ -149,6 +151,7 @@
               </svg>
             </div>
             <input class="
+                border-0
                 placeholder:text-xs placeholder:text-slate-400
                 font-futura-ptlight
                 bg-white
@@ -167,7 +170,7 @@
                 md:text-sm
               " placeholder="Password..." type="password" name="myPassword" />
           </div>
-          <a href="/payment" class="
+          <router-link to="/payment" class="
               font-futura-ptbook
               py-3
               px-12
@@ -181,10 +184,9 @@
               rounded-full
               border border-leny-blue-800
               hover:bg-transparent hover:text-leny-blue-800
-              shadow-md
               transition
               duration-300
-            ">Sign Up</a>
+            ">Sign Up</router-link>
           <p class="
               font-futura-ptbook
               signup

@@ -18,7 +18,7 @@
         <p class="text-center text-leny-cyan-400 text-2xl font-futura-ptmedium mb-8" :class="(isFavorite && 'text-white') || ''">
           {{ price }} $ H.T
         </p>
-        <router-link to="/signup" class="py-3 px-12 w-48 block mx-auto text-center font-futura-ptbook text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300" :class="
+        <router-link to="/signup" class="py-3 px-12 w-48 block mx-auto text-center font-futura-ptbook text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300" :class="
             (isFavorite &&
               'bg-leny-cyan-400 border-leny-cyan-400 hover:text-leny-cyan-400') ||
             ''

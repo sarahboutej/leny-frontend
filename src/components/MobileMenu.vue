@@ -63,7 +63,6 @@
               rounded-full
               border border-leny-blue-800
               hover:bg-transparent hover:text-leny-blue-800
-              shadow-md
               transition
               duration-300
             ">Login</router-link>
@@ -78,7 +77,6 @@
               rounded-full
               border border-leny-cyan-400
               hover:bg-transparent hover:text-leny-cyan-400
-              shadow-md
               transition
               duration-300
             ">Register</router-link>

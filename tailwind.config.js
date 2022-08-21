@@ -6,6 +6,7 @@ module.exports = {
   ],
   theme: {
     extend: {
+      important: true,
       container: {
         screens: {
           'xs' : '640px',
@@ -41,9 +42,11 @@ module.exports = {
         'leny-gray-500': '#B7BAC3',
         'leny-gray-400': '#CFD1D8',
         'leny-gray-300': '#CED1D9',
+        'leny-gray-200': '#B6BAC4',
         'leny-light-gray': '#F7F8FA',
         'leny-red-600': '#AC2318',
         'transparent': '#ffffff00',
+        'accent': '#B6BAC4'
       },
       backgroundImage: {
         'login-image': "url('../images/login_bg.jpg')",
@@ -53,6 +56,10 @@ module.exports = {
         'card': "url('../images/card-bg.png')",
         'search': "url('../images/search-bg.jpg')",
         'smb': "url('../images/search-mobile.jpg')",
+        'check': "url('../images/check.svg')",
+        'radio-check': "url('../images/radio-check.svg')",
+        'agent-msg': "url('../images/agent_message_bg.svg')",
+        'user-msg': "url('../images/user_msg_bg.svg')"
       },
       fontSize: {
         '7xl': '7rem',
@@ -63,13 +70,28 @@ module.exports = {
       },
       height: {
         'video5' : '25.063rem',
+        '30' : '7.5rem',
+        '18' : '4.25rem'
       },
       width: {
         '75' : '18.75rem',
+        '86' : '22.813rem',
+        '72' : '4.5rem',
         '84'   : '20.375rem',
-        '22' : '5.375rem'
+        '22' : '5.375rem',
+        '23' : '5.75rem',
+        '30' : '7.5rem',
+        '13' : '3.313rem',
+        '15' : '3.75rem'
       },
       margin: {
+        '4.5' : '1.125rem',
+        '13' : '3.313rem'
+      },
+      padding: {
+        '15' : '3.75rem'
+      },
+      spacing: {
         '4.5' : '1.125rem'
       },
       minHeight: {
@@ -79,6 +101,8 @@ module.exports = {
       borderRadius: {
         'search-card': '2.4rem',
         'search-card-mobile': '3.2rem',
+        '2.5': '0.625rem',
+        '4.5': '1.125rem'
       },
       screens: {
         'small': '460px',
@@ -97,5 +121,5 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui")],
+  plugins: [require("daisyui"), require('tailwind-scrollbar'), require('@tailwindcss/line-clamp'), require("@tailwindcss/forms")],
 }

@@ -8,6 +8,21 @@
   }
 }
 
+@layer utilities {
+  .scrollbar-medium::-webkit-scrollbar {
+    width: 0.25rem;
+  }
+  .calendar-icon::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url("../images/calendar_circle.svg") no-repeat;
+    background-size: contain;
+    width: 28px;
+    height: 28px;
+  }
+}
+
 /** Light **/
 @font-face {
   font-family: "futura_ptlight";

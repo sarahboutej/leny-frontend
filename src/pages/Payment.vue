@@ -42,12 +42,12 @@
         <form action="">
           <div class="relative">
             <label for="myUserName" class="text-leny-gray-800 text-sm font-futura-ptbook">Email</label>
-            <input class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Email..." type="email" id="myUserName" name="myUserName" />
+            <input class="border-0 font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 mt-3 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Email..." type="email" id="myUserName" name="myUserName" />
           </div>
           <div class="relative">
             <p class="text-leny-gray-800 text-sm mb-3 mt-4 font-futura-ptbook">Card information</p>
             <div class="relative">
-              <input class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="1234 1234 1234" name="cardInformation" />
+              <input class="border-0  font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="1234 1234 1234" name="cardInformation" />
               <div class="flex absolute inset-y-0 right-0 justify-end mr-8 items-center pl-3 pointer-events-none w-full mb-4">
                 <img src="../assets/images/visa_icon.svg" class="mr-2" alt="" />
                 <img src="../assets/images/mastercard_icon.svg" alt="" />
@@ -56,10 +56,10 @@
           </div>
           <div class="grid grid-cols-2 gap-4">
             <div>
-              <input class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="MM/YY" type="text" name="dateCard" />
+              <input class="border-0 font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="MM/YY" type="text" name="dateCard" />
             </div>
             <div class="relative">
-              <input class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-2 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="CVC" type="text" name="dateCard" />
+              <input class="border-0 font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-2 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="CVC" type="text" name="dateCard" />
               <div class="flex absolute inset-y-0 right-0 justify-end mr-8 items-center pl-3 pointer-events-none w-full mb-4">
                 <img src="../assets/images/CVC_icon.svg" alt="" />
               </div>
@@ -68,21 +68,21 @@
           <div class="relative">
             <p class="text-leny-gray-800 text-sm mb-3 mt-4 font-futura-ptbook">Name on card</p>
             <div>
-              <input class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Name" name="cardName" />
+              <input class="border-0  font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" placeholder="Name" name="cardName" />
             </div>
           </div>
           <div class="relative mb-7">
             <p class="text-leny-gray-800 text-sm mb-3 mt-4 font-futura-ptbook">
               Country or region
             </p>
-            <select class="font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" name="cardName">
+            <select class="border-0  font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 bg-white rounded-full py-2 sm:py-2.5 pl-8 pr-3 mb-4 w-full shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-sky-500 focus:ring-1 sm:text-sm" name="cardName">
               <option value="volvo" selected>France</option>
               <option value="saab">Egypt</option>
               <option value="opel">Tunisia</option>
               <option value="audi">USA</option>
             </select>
           </div>
-          <router-link to="/success" class="py-3 px-12 block w-3/4 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Start Trial</router-link>
+          <router-link to="/success" class="py-3 px-12 block w-3/4 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Start Trial</router-link>
           <p class="signup text-center text-sm w-3/4 mx-auto text-leny-gray-800 mt-3 font-futura-ptlight">
             After you trial ends, you will be charged 89 € per month starting
             May 11, 2022. You can always can always cancel before then. >

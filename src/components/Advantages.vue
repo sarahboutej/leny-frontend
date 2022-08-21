@@ -17,7 +17,7 @@
             <img :src="require(`../assets/images/${tab.icon}`)" alt="" />
             <span class="text-base text-leny-gray-700 ml-4 font-futura-ptbook">{{tab.name}}</span>
           </button>
-          <a href="#" class="block py-3 px-14 text-center font-futura-ptbook text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 shadow-md transition duration-300">Explore</a>
+          <a href="#" class="block py-3 px-14 text-center font-futura-ptbook text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Explore</a>
         </div>
         <div class="card-wrapper overflow-hidden ml-16">
           <div v-for="(tab, index) in tabs" :key="index" class="card animate-slideIn" :class="activeTab !=index && 'hidden'">

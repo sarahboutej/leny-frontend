@@ -19,13 +19,13 @@
         <div class="flex mb-3 space-x-8">
           <div class="form-control">
             <label class="label cursor-pointer">
-              <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
+              <input type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
               <span class="label-text ml-3 text-xs text-leny-gray-700">Live/immediately</span>
             </label>
           </div>
            <div class="form-control">
             <label class="label cursor-pointer">
-              <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
+              <input id="option-2" type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
               <span class="label-text ml-3 text-xs text-leny-gray-700">Every hour</span>
             </label>
           </div>
@@ -33,19 +33,19 @@
         <div class="flex justify-between">
           <div class="form-control">
             <label class="label cursor-pointer">
-              <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
+              <input id="option-3" type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
               <span class="label-text ml-3 text-xs text-leny-gray-700">Day</span>
             </label>
           </div>
           <div class="form-control">
             <label class="label cursor-pointer">
-              <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
+              <input id="option-4" type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
               <span class="label-text ml-3 text-xs text-leny-gray-700">Week</span>
             </label>
           </div>
           <div class="form-control">
             <label class="label cursor-pointer">
-              <input type="radio" name="radio-4" class="checked:bg-leny-blue-800 radio radio-sm shadow-md" />
+              <input id="option-5" type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
               <span class="label-text ml-3 text-xs text-leny-gray-700">Month</span>
             </label>
           </div>
@@ -66,7 +66,6 @@
                   rounded-full
                   border border-leny-blue-800
                   hover:bg-transparent hover:text-leny-blue-800
-                  shadow-md
                   transition
                   duration-300
                   cursor-pointer
