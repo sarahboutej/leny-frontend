@@ -2,9 +2,9 @@
   <div class="relative card-wrapper shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-search-card-mobile md:rounded-search-card pb-2 md:pb-5">
     <div>
       <div class="relative">
-        <p class="absolute left-5 top-5">
+       <!--  <p class="absolute left-5 top-5">
           <img src="../assets/images/heart.svg" loading="lazy" role="presentation">
-        </p>
+        </p> -->
         <p class="absolute right-1 top-[45%]">
           <img src="../assets/images/arrow-next.svg" loading="lazy" role="presentation">
         </p>

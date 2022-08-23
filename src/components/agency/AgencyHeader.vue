@@ -5,15 +5,16 @@
         <div class="item w-1/5 h-auto flex justify-end">
           <div class="avatar">
             <div class="w-30 h-30 rounded-3xl bg-leny-cyan-400">
-              <p class="text-white text-h1xl h-full flex items-center justify-center font-futura-ptbook">CA</p>
+              <div v-if="$store.state.logo" :style="{ 'background-image': `url(${$store.state.logo})` }" class="w-30 h-30 bg-cover"></div>
+              <p v-else class="text-white text-h1xl h-full flex items-center justify-center font-futura-ptbook">{{ $store.state.abbreviation }}</p>
             </div>
           </div>
         </div>
         <div class="item w-4/5 h-auto pl-5">
           <div class="box-wrapper">
             <div>
-              <h3 class="text-leny-cyan-400 text-2xl font-futura-ptmedium mb-1">Company Name</h3>
-              <p class="mb-2 text-base text-white font-futura-ptbook">Company bio.</p>
+              <h3 class="text-leny-cyan-400 text-2xl font-futura-ptmedium mb-1">{{ $store.state.name }}</h3>
+              <p class="mb-2 text-base text-white font-futura-ptbook">{{ $store.state.bio }}</p>
               <router-link to="/agency/edit_profile" class="
               py-2
               px-8

@@ -118,7 +118,7 @@
       <div>
         <h4 class="mb-4 text-leny-blue-800 text-base font-futura-ptmedium">Estimate Status:</h4>
         <div class="flex items-center">
-          <select class="select w-full
+          <select class="select w-full bg-white
             shadow-[0px_0px_6px_rgba(0,0,0,0.29)] 
             max-w-xs rounded-3xl 
             h-10 max-h-10 min-h-min mr-6 

@@ -12,9 +12,9 @@
             <span class="text-xs">Premium</span>
           </button>
         </p>
-        <p class="absolute top-5 cursor-pointer tooltip tooltip-left" :class="isPropertiesPage && 'right-5' || 'left-5'" data-tip="Mark as favorite">
+        <!-- <p class="absolute top-5 cursor-pointer tooltip tooltip-left" :class="isPropertiesPage && 'right-5' || 'left-5'" data-tip="Mark as favorite">
           <img src="../../assets/images/heart.svg" loading="lazy" role="presentation">
-        </p>
+        </p> -->
         <p class="absolute top-[45%] right-5">
           <img src="../../assets/images/arrow-next.svg" loading="lazy" role="presentation">
         </p>

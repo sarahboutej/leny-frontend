@@ -1,12 +1,12 @@
 
 <template>
   <Header :is-agency-page="true" />
-  <AgencyHeader :actionButton="false" :page="'agent'" />
+  <AgencyHeader ref="companyHeader" :actionButton="false" :page="'agent'" />
   <section class="pb-8">
     <div class="container mx-auto">
       <!-- Profile Part -->
       <div tabindex="0" class="collapse collapse-arrow bg-leny-light-gray rounded-box py-10 px-15 mb-4.5">
-        <input type="checkbox" class="peer" />
+        <input type="checkbox" class="peer" /> 
         <div class="collapse-title text-xl after:top-0 after:bottom-0 after:mt-10 after:mr-11 after:shadow-leny-blue-800">
           <span class="text-leny-blue-800 text-2xl font-futura-ptmedium">Your Profile</span>
         </div>
@@ -15,20 +15,20 @@
             <label for="agency-img" class="cursor-pointer">
               <img src="../../assets/images/add_icon.svg" loading="lazy" role="presnetation">
             </label>
-            <input type="file" id="agency-img" class="hidden">
+            <input ref="fileInput" type="file" id="agency-img" class="hidden" @input="pickFile">
             <span class="pl-3.5 font-futura-ptbook">Upload your logo (2000px by 2000px recommended)</span>
           </div>
           <div class="flex items-center space-x-4.5 flex-nowrap mt-4.5">
             <div class="w-1/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3">
               <div>
                 <label for="agencyName" class="text-leny-gray-800 text-sm font-futura-ptlight">Company Name</label>
-                <input class="border-0 focus:ring-0  text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Leny" type="text" id="myUserName" name="agencyName" />
+                <input v-model="$store.state.name" class="border-0 focus:ring-0  text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" type="text" id="myUserName" name="agencyName" />
               </div>
             </div>
             <div class="w-2/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3">
               <div>
                 <label for="agencyBio" class="text-leny-gray-800 text-sm font-futura-ptlight">Bio</label>
-                <input class="border-0 focus:ring-0  text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Lorem Ipsum is simply dummy text of the printing and typesetting industry." type="text" id="agencyBio" name="agencyBio" />
+                <input v-model="$store.state.bio" class="border-0 focus:ring-0  text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" type="text" id="agencyBio" name="agencyBio" />
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@
 
       <!-- Presentation Part -->
       <div tabindex="0" class="collapse collapse-arrow bg-leny-light-gray rounded-box py-10 px-15 mb-4.5">
-        <input type="checkbox" class="peer" />
+        <input type="checkbox" class="peer" /> 
         <div class="collapse-title text-xl after:top-0 after:bottom-0 after:mt-10 after:mr-11 after:shadow-leny-blue-800">
           <span class="text-leny-blue-800 text-2xl font-futura-ptmedium">Presentation</span>
         </div>
@@ -146,7 +146,7 @@
 
       <!-- Payment -->
       <div tabindex="0" class="collapse collapse-arrow bg-leny-light-gray rounded-box py-10 px-15 mb-4.5">
-        <input type="checkbox" class="peer" />
+        <input type="checkbox" class="peer" /> 
         <div class="collapse-title text-xl after:top-0 after:bottom-0 after:mt-10 after:mr-11 after:shadow-leny-blue-800">
           <span class="text-leny-blue-800 text-2xl font-futura-ptmedium">Payment method</span>
         </div>
@@ -213,7 +213,7 @@
 
       <!-- Subscription Plan -->
       <div tabindex="0" class="collapse collapse-arrow bg-leny-light-gray rounded-box py-10 px-15 mb-4.5">
-        <input type="checkbox" class="peer" />
+        <input type="checkbox" class="peer" /> 
         <div class="collapse-title text-xl after:top-0 after:bottom-0 after:mt-10 after:mr-11 after:shadow-leny-blue-800">
           <span class="text-leny-blue-800 text-2xl font-futura-ptmedium">Subscription Plan</span>
         </div>
@@ -265,6 +265,20 @@ export default {
         }
       ]
     }
+  },
+  methods: {
+    pickFile () {
+        let input = this.$refs.fileInput
+        let file = input.files
+        if (file && file[0]) {
+          let reader = new FileReader
+          reader.onload = e => {
+            this.$store.state.logo = e.target.result
+          }
+          reader.readAsDataURL(file[0])
+          this.$emit('input', file[0])
+        }
+      }
   }
 };
 </script>

@@ -5,7 +5,7 @@
   <section class="pb-16">
     <div class="container mx-auto">
       <h1 class="text-h2xl text-leny-blue-800 mb-6 font-futura-ptmedium">Agents List</h1>
-      <div class="grid grid-cols-3 grid-rows-1 gap-6">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 grid-rows-1 gap-6">
         <user-card 
           v-for="(agent, index) in agentsItems" 
           :key="index" 

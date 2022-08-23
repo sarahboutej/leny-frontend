@@ -158,7 +158,7 @@
                        focus:outline-none 
                        focus:border-sky-500 focus:ring-sky-500 
                        focus:ring-1">
-                       <img src="../../assets/images/gallery_icon.svg" class="absolute inset-y-0 right-2.5 my-auto" loading="lazy" role="presentation">
+                <img src="../../assets/images/gallery_icon.svg" class="absolute inset-y-0 right-2.5 my-auto" loading="lazy" role="presentation">
               </label>
               <input id="drop-zone" class="hidden" name="propertyGallery" type="file" />
             </div>
@@ -200,16 +200,20 @@
         </div>
 
         <div class="w-1/4">
-          <div class="form-control">
+          <div>
             <p class="text-leny-gray-800 text-sm mb-3 mt-4 font-futura-ptbook">Chat</p>
             <div class="flex items-center mt-2">
-              <div class="flex items-center">
-                <input id="option-1" type="radio" value="" name="active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
-                <label for="option-1" class="ml-2 text-sm font-futura-ptbook text-leny-gray-800">Active</label>
+              <div class="form-control">
+                <label class="flex items-center cursor-pointer label">
+                  <input type="radio" name="radio-6" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check" checked />
+                  <span class="ml-2 text-sm font-futura-ptbook text-leny-gray-800 label-text">Active</span>
+                </label>
               </div>
-              <div class="flex items-center ml-10">
-                <input id="option-2" type="radio" value="" name="not-active" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check">
-                <label for="option-2" class="ml-2 text-sm font-futura-ptbook text-leny-gray-800">Not active</label>
+              <div class="form-control">
+                <label class="flex items-center label cursor-pointer ml-10">
+                  <input type="radio" name="radio-6" class="w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] border-white focus:ring-0 focus:ring-offset-0 checked:bg-radio-check" checked />
+                  <span class="ml-2 text-sm font-futura-ptbook text-leny-gray-800 label-text">Not active</span>
+                </label>
               </div>
             </div>
           </div>

@@ -31,6 +31,10 @@
   @apply bg-leny-light-gray;
 }
 
+select option {
+  @apply bg-white;
+}
+
 /** Light **/
 @font-face {
   font-family: "futura_ptlight";
