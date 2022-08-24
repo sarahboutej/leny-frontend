@@ -18,6 +18,7 @@ import EditProfile from './pages/agency/EditProfile.vue';
 import EstimationDetails from "./pages/agency/EstimationDetails.vue";
 import ChatDetails from "./pages/agency/ChatDetails.vue";
 import AddProperty from "./pages/agency/AddProperty.vue";
+import Blank from "./pages/BlankPage.vue";
 
 const routes = [
 	{
@@ -116,6 +117,11 @@ const routes = [
     path: "/agency/chat/details",
     name: "ChatDetails",
     component: ChatDetails,
+  },
+  {
+    path: "/blank",
+    name: "Blank",
+    component: Blank,
   },
 ];
 

@@ -3,6 +3,7 @@ module.exports = {
   content: [
     "./public/index.html",
     "./src/**/*.{vue,js,ts}",
+    './node_modules/tw-elements/dist/js/**/*.js'
   ],
   theme: {
     extend: {
@@ -121,5 +122,5 @@ module.exports = {
       }
     },
   },
-  plugins: [require("daisyui"), require('tailwind-scrollbar'), require('@tailwindcss/line-clamp'), require("@tailwindcss/forms")],
+  plugins: [require("daisyui"), require('tailwind-scrollbar'), require('@tailwindcss/line-clamp'), require("@tailwindcss/forms"),require('tw-elements/dist/plugin')],
 }
