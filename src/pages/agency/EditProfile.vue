@@ -44,14 +44,15 @@
                   <div class="flex-auto bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3">
                     <div class="relative">
                       <label for="agencyColor" class="text-leny-gray-800 text-sm font-futura-ptlight">Color</label>
-                      <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Blue" type="text" id="agencyColor" name="agencyColor" />
+
+                      <input v-model="currentColor" class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" type="text" id="agencyColor" name="agencyColor" />
                     </div>
                   </div>
-                  <div class="flex items-center justify-center bg-leny-blue-800 rounded-2.5 w-72">
+                  <div class="flex items-center justify-center rounded-2.5 w-72 relative" :style="{ backgroundColor: currentColor }">
                     <label for="agency-color" class="cursor-pointer">
                       <img src="../../assets/images/pallete_icon.svg" loading="lazy" role="presnetation" />
                     </label>
-                    <input type="color" id="agency-color" class="hidden" />
+                    <div id="agency-color" class="color-picker hidden"></div>
                   </div>
                 </div>
               </div>
@@ -207,6 +208,9 @@
   <Footer />
 </template>
 <script>
+import "@simonwep/pickr/dist/themes/nano.min.css";
+import Pickr from "@simonwep/pickr";
+
 import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import AgencyHeader from "../../components/agency/AgencyHeader.vue";
@@ -241,7 +245,39 @@ export default {
           isActive: false,
         },
       ],
+      pickr: null,
+      currentColor: "#112C61",
     };
+  },
+  mounted() {
+    this.pickr = Pickr.create({
+      el: ".color-picker",
+      theme: "nano", // or 'monolith', or 'nano'
+
+      swatches: null,
+
+      components: {
+        // Main components
+        preview: true,
+        opacity: true,
+        hue: true,
+
+        // Input / output Options
+        interaction: {
+          hex: true,
+          rgba: true,
+          hsla: true,
+          hsva: true,
+          cmyk: true,
+          input: true,
+          clear: true,
+          save: true,
+        },
+      },
+    });
+    this.pickr.on("change", (color) => {
+      this.currentColor = color.toHEXA().toString();
+    });
   },
   methods: {
     pickFile() {
@@ -259,3 +295,15 @@ export default {
   },
 };
 </script>
+<style>
+.pickr {
+  position: absolute !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+.pickr .pcr-button {
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+</style>
