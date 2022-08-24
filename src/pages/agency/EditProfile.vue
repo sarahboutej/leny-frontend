@@ -66,14 +66,14 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item bg-leny-light-gray  rounded-box mb-6">
+        <div class="accordion-item bg-leny-light-gray rounded-box mb-6">
           <h2 class="accordion-header mb-0" id="headingTwo">
             <button class="accordion-button rounded-box collapsed relative flex items-center w-full py-10 px-15 text-leny-blue-800 text-2xl font-futura-ptmedium bg-leny-light-gray text-left border-0 transition focus:outline-none [&:not(.collapsed)]:text-leny-blue-800 [&:not(.collapsed)]:bg-leny-light-gray [&:not(.collapsed)]:shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
               Presentation
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-            <div class="accordion-body  px-20 pb-8">
+          <div id="collapseTwo" class="accordion-collapse collapse overflow-visible" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body px-20 pb-8">
               <div class="flex items-center bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3 mt-2">
                 <label for="agency-img" class="cursor-pointer">
                   <img src="../../assets/images/add_icon.svg" loading="lazy" role="presnetation" />
@@ -101,15 +101,23 @@
                   </div>
                 </div>
                 <div class="w-2/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3 font-futura-ptlight">
-                  <label for="agencyBio" class="text-leny-gray-800 text-sm font-futura-ptbook p-0">Choose Properties</label>
-                  <select class="select select-ghost w-full p-0 focus:bg-leny-gray-300 focus:outline-0 text-leny-gray-700 text-sm font-futura-ptlight">
-                    <option disabled selected>
-                      Choose properties list will show to user
-                    </option>
-                    <option>Option 1</option>
-                    <option>Option 2</option>
-                    <option>Option 3</option>
-                  </select>
+                  <span class="text-leny-gray-800 text-sm font-futura-ptbook p-0">Choose Properties</span>
+                  <div class="dropdown block w-full">
+                    <label tabindex="0" class="btn border-0 flex items-center bg-leny-gray-300 hover:bg-leny-gray-300  text-leny-gray-700 justify-between w-full normal-case px-0 pr-5">
+                      <span class="text-leny-gray-600">Choose properties list will show to user</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
+                      </svg>
+                    </label>
+                    <div tabindex="0" class="dropdown-content bg-leny-gray-300 p-2 shadow rounded-box flex w-full flex-wrap mt-4">
+                      <div class="w-1/3" v-for="index in 12" :key="index">
+                        <label class="cursor-pointer label justify-start mb-4 pb-0">
+                          <input type="checkbox" class="w-3 h-3 text-leny-gray-200 border-leny-gray-200 bg-leny-gray-200 rounded-sm focus:ring-0 focus:ring-offset-0 checked:bg-check mr-2" />
+                          <span class="label-text font-futura-ptbook text-leny-gray-700 text-base">Property Name</span>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -123,7 +131,7 @@
         </div>
 
         <!-- Payment -->
-        <div class="accordion-item bg-leny-light-gray  rounded-box mb-6">
+        <div class="accordion-item bg-leny-light-gray rounded-box mb-6">
           <h2 class="accordion-header mb-0" id="headingThree">
             <button class="accordion-button rounded-box collapsed relative flex items-center w-full py-10 px-15 text-leny-blue-800 text-2xl font-futura-ptmedium text-left bg-leny-light-gray border-0 transition focus:outline-none [&:not(.collapsed)]:text-leny-blue-800 [&:not(.collapsed)]:bg-leny-light-gray [&:not(.collapsed)]:shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
               Payment method
