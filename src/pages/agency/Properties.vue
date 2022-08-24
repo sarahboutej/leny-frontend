@@ -15,10 +15,11 @@
           <property-card 
             v-for="(item, index) in cardItems" 
             :key="index" 
+            :id="`propertyCaroussel${index}`"
             :item-type="item.type" 
             :item-title="item.title" 
             :address="item.address" 
-            :image="item.image" 
+            :images="item.images" 
             :rooms="item.rooms" 
             :bathroom="item.bathroom" 
             :price="item.price" 
@@ -85,7 +86,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -96,7 +97,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -107,7 +108,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -118,7 +119,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -129,7 +130,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -140,7 +141,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -151,7 +152,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
         {
@@ -162,7 +163,7 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
           time: "48"
         },
       ],

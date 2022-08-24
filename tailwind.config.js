@@ -60,7 +60,9 @@ module.exports = {
         'check': "url('../images/check.svg')",
         'radio-check': "url('../images/radio-check.svg')",
         'agent-msg': "url('../images/agent_message_bg.svg')",
-        'user-msg': "url('../images/user_msg_bg.svg')"
+        'user-msg': "url('../images/user_msg_bg.svg')",
+        'slider-next-arrow': "url('../images/arrow-next.svg')",
+        'slider-prev-arrow': "url('../images/arrow-prev.svg')"
       },
       fontSize: {
         '7xl': '7rem',

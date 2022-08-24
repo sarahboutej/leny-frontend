@@ -1,0 +1,13 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>arrow-next-svg</title>
+	<style>
+		.s0 { fill: #ffffff } 
+		.s1 { fill: none;stroke: #6d7078;stroke-linecap: round;stroke-linejoin: round } 
+	</style>
+	<g id="Group_10862">
+		<g id="Layer">
+			<path id="Ellipse_6-2" class="s0" d="m12 0.9c6.2 0 11.2 5 11.2 11.1 0 6.1-5 11.1-11.3 11.1-6.2 0-11.2-5-11.2-11.1 0-6.1 5-11.1 11.3-11.1z"/>
+		</g>
+		<path id="arrow" class="s1" d="m12.8 14.9l-3.4-3.4 3.4-3.4"/>
+	</g>
+</svg>

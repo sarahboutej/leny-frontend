@@ -29,13 +29,13 @@
             </div>
             <div class="row px-6 2xl:px-5 py-8 2xl:py-8">
               <div class="grid grid-cols-2 lg:grid-cols-4 grid-rows-1 gap-3">
-                <SearchCard v-for="(item, index) in cardItems" :key="index" :item-type="item.type" :item-title="item.title" :address="item.address" :image="item.image" :rooms="item.rooms" :bathroom="item.bathroom" :price="item.price" />
+                <property-card v-for="(item, index) in cardItems" :key="index" :id="`propertyCaroussel${index}`" :item-type="item.type" :item-title="item.title" :address="item.address" :images="item.images" :rooms="item.rooms" :bathroom="item.bathroom" :price="item.price" :show-exclude="false" :is-properties-page="false" />
               </div>
             </div>
           </div>
         </div>
       </div>
-       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Try For Free</router-link>
+      <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Try For Free</router-link>
     </div>
   </section>
   <section class="block md:hidden pb-14 mx-4 md:mx-0">
@@ -47,11 +47,11 @@
               <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-10 text-leny-gray-800"> &lt; 20,000 €/m² </span>
               <span class="text-xs rounded-full bg-leny-gray-300 py-2 px-10 text-leny-gray-800"> &lt; 20 m² </span>
             </div>
-            <SearchCard class="w-10/12 mx-auto" :item-type="cardItems[0].type" :item-title="cardItems[0].title" :address="cardItems[0].address" :image="cardItems[0].image" :rooms="cardItems[0].rooms" :bathroom="cardItems[0].bathroom" :price="cardItems[0].price" />
+            <property-card class="w-10/12 mx-auto" :id="'propertyCaroussel100'" :item-type="cardItems[0].type" :item-title="cardItems[0].title" :address="cardItems[0].address" :images="cardItems[0].images" :rooms="cardItems[0].rooms" :bathroom="cardItems[0].bathroom" :price="cardItems[0].price" :show-exclude="false" :is-properties-page="false" />
           </div>
         </div>
       </div>
-       <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Try For Free</router-link>
+      <router-link to="/subscription_plan" class="my-8 py-3 px-12 block w-44 mx-auto text-center font-futura-ptbook text-xs sm:text-sm text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300">Try For Free</router-link>
     </div>
   </section>
   <Footer />
@@ -60,13 +60,13 @@
 <script>
 import Header from "../components/Header.vue";
 import Footer from "../components/Footer.vue";
-import SearchCard from "../components/SearchCard.vue";
+import PropertyCard from "../components/agency/PropertyCard.vue";
 export default {
   name: "SearchEngine",
   components: {
     Header,
     Footer,
-    SearchCard,
+    PropertyCard,
   },
   data() {
     return {
@@ -79,7 +79,11 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: [
+            "property-img-1.jpg",
+            "property-img-2.jpg",
+            "property-img-3.jpg",
+          ],
         },
         {
           type: "Apartment",
@@ -89,7 +93,11 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: [
+            "property-img-1.jpg",
+            "property-img-2.jpg",
+            "property-img-3.jpg",
+          ],
         },
         {
           type: "Apartment",
@@ -99,7 +107,11 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: [
+            "property-img-1.jpg",
+            "property-img-2.jpg",
+            "property-img-3.jpg",
+          ],
         },
         {
           type: "Apartment",
@@ -109,7 +121,11 @@ export default {
           rooms: 2,
           bathroom: 1,
           price: "119.000",
-          image: "search-card.png",
+          images: [
+            "property-img-1.jpg",
+            "property-img-2.jpg",
+            "property-img-3.jpg",
+          ],
         },
       ],
     };

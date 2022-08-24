@@ -1,24 +1,32 @@
 <template>
   <div class="flex">
-    <input 
-      v-if="excludeProperty" 
-      type="checkbox" 
-      class="mr-1 -mt-2 w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-sm border-white focus:ring-0 focus:ring-offset-0 checked:bg-check" />
+    <input v-if="excludeProperty" type="checkbox" class="mr-1 -mt-2 w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-sm border-white focus:ring-0 focus:ring-offset-0 checked:bg-check" />
     <div class="relative card-wrapper shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-search-card-mobile md:rounded-search-card pb-2 md:pb-6">
       <div class="relative">
-        <p class="absolute left-5 top-3">
+        <p class="absolute z-10 left-5 top-3">
           <button v-if="isPropertiesPage" class="rounded-full bg-white text-leny-cyan-400 px-4 py-2 text-xs flex items-center hover:bg-leny-gray-400">
             <img src="../../assets/images/premium_icon.svg" loading="lazy" role="presentation" class="mr-2 w-4" />
             <span class="text-xs">Premium</span>
           </button>
         </p>
-        <!-- <p class="absolute top-5 cursor-pointer tooltip tooltip-left" :class="isPropertiesPage && 'right-5' || 'left-5'" data-tip="Mark as favorite">
-          <img src="../../assets/images/heart.svg" loading="lazy" role="presentation">
-        </p> -->
         <p class="absolute top-[45%] right-5">
           <img src="../../assets/images/arrow-next.svg" loading="lazy" role="presentation">
         </p>
-        <img :src="require(`../../assets/images/${image}`)" class="mx-auto mb-3 w-full" loading="lazy" role="presentation" />
+        <div :id="id" class="carousel slide relative" data-bs-interval="false">
+          <div class="carousel-inner relative w-full rounded-3xl overflow-hidden">
+            <div v-for="(image,index) in images" :key="index" class="carousel-item relative float-left w-full" :class="index === 0 && 'active'">
+              <img :src="require(`../../assets/images/${image}`)" class="block w-full" alt="Wild Landscape" />
+              <button v-if="index !== 0" class="carousel-control-prev absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline left-0 opacity-100" type="button" :data-bs-target="`#${id}`" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-slider-prev-arrow inline-block bg-no-repeat w-5 h-5" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button v-if="index !== images.length-1" class="carousel-control-next absolute top-0 bottom-0 flex items-center justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 opacity-100" type="button" :data-bs-target="`#${id}`" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-slider-next-arrow inline-block bg-no-repeat w-5 h-5" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="px-6">
         <span class="text-sm text-leny-cyan-400 font-futura-ptlight">{{ itemType }}</span>
@@ -66,6 +74,10 @@
 export default {
   name: "SearchCard",
   props: {
+    id: {
+      type: String,
+      default: () => "",
+    },
     itemType: {
       type: String,
       default: () => "",
@@ -94,7 +106,7 @@ export default {
       type: String,
       default: () => "",
     },
-    image: {
+    images: {
       type: String,
       default: () => "",
     },
@@ -111,10 +123,15 @@ export default {
       default: () => true,
     },
   },
+  data: () => {
+    return {
+      slideIndex: 0,
+    };
+  },
   computed: {
-    excludeProperty () {
+    excludeProperty() {
       return this.showExclude;
-    }
+    },
   },
 };
 </script>
