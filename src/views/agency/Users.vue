@@ -1,21 +1,20 @@
 
 <template>
   <Header :is-agency-page="true" />
-  <AgencyHeader :actionButton="false" :page="'chat'" />
-  <section class="pb-16">
+  <AgencyHeader :actionButton="false" :page="'users'" />
+  <section class="pb-14 md:pb-24">
     <div class="container mx-auto">
-      <h1 class="text-h2xl text-leny-blue-800 mb-6 font-futura-ptmedium">Chat</h1>
+      <h1 class="text-h2xl text-leny-blue-800 mb-6 font-futura-ptmedium">Users List</h1>
       <div class="grid grid-cols-3 grid-rows-1 gap-6">
         <agent-card 
-          v-for="(agent, index) in usersItems" 
-          :key="index" 
-          :user-name="agent.name" 
-          :user-email="agent.email" 
-          :user-phone="agent.phone" 
-          :user-photo="agent.photo"
+          v-for="user in $store.state.users" 
+          :key="user.id" 
+          :user-name="user.name" 
+          :user-email="user.email" 
+          :user-phone="user.phone" 
+          :user-photo="user.photo"
           :isAgent="false"
-          :buttonlabel="'Messages'"
-          :isChatCard="true"
+          :displayAction="false"
         />
       </div>
     </div>

@@ -13,7 +13,7 @@
       <h1 class="text-h2xl text-leny-blue-800 mb-6 font-futura-ptmedium">Properties List</h1>
       <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-1 gap-6">
           <property-card 
-            v-for="(item, index) in cardItems" 
+            v-for="(item, index) in $store.state.properties" 
             :key="index" 
             :id="`propertyCaroussel${index}`"
             :item-type="item.type" 
@@ -77,96 +77,6 @@ export default {
   },
   data: () => {
     return {
-      cardItems: [
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-           images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-        {
-          type: "Apartment",
-          title: "Monaco - Open view",
-          address: "Monaco - Open view",
-          area: 120,
-          rooms: 2,
-          bathroom: 1,
-          price: "119.000",
-          images: ["property-img-1.jpg", "property-img-2.jpg","property-img-3.jpg"],
-          time: "48"
-        },
-      ],
       excludePropertyProperties: false
     };
   },

@@ -1,24 +1,24 @@
 import { createWebHistory, createRouter } from 'vue-router';
-import Home from './pages/Home.vue';
-import Login from './pages/Login.vue';
-import SubscriptionPlan from './pages/SubscriptionPlans.vue';
-import Contact from './pages/Contact.vue';
-import Search from './pages/SearchEngine.vue';
-import SignUp from './pages/SignUp.vue';
-import PaymentAccepted from './pages/PaymentAccepted.vue';
-import PaymentRejected from './pages/PaymentRejected.vue';
-import Payment from './pages/Payment.vue';
-import Agents from './pages/agency/Agents.vue';
-import Users from './pages/agency/Users.vue';
-import Chat from './pages/agency/Chat.vue';
-import Ads from './pages/agency/Ads.vue';
-import Properties from './pages/agency/Properties.vue';
-import Estimation from './pages/agency/Estimation.vue';
-import EditProfile from './pages/agency/EditProfile.vue';
-import EstimationDetails from "./pages/agency/EstimationDetails.vue";
-import ChatDetails from "./pages/agency/ChatDetails.vue";
-import AddProperty from "./pages/agency/AddProperty.vue";
-import Blank from "./pages/BlankPage.vue";
+import Home from '../views/Home.vue';
+import Login from '../views/Login.vue';
+import SubscriptionPlan from '../views/SubscriptionPlans.vue';
+import Contact from '../views/Contact.vue';
+import Search from '../views/SearchEngine.vue';
+import SignUp from '../views/SignUp.vue';
+import PaymentAccepted from '../views/PaymentAccepted.vue';
+import PaymentRejected from '../views/PaymentRejected.vue';
+import Payment from '../views/Payment.vue';
+import Agents from '../views/agency/Agents.vue';
+import Users from '../views/agency/Users.vue';
+import Chat from '../views/agency/Chat.vue';
+import Ads from '../views/agency/Ads.vue';
+import Properties from '../views/agency/Properties.vue';
+import Estimation from '../views/agency/Estimation.vue';
+import EditProfile from '../views/agency/EditProfile.vue';
+import EstimationDetails from "../views/agency/EstimationDetails.vue";
+import ChatDetails from "../views/agency/ChatDetails.vue";
+import AddProperty from "../views/agency/AddProperty.vue";
+import Blank from "../views/BlankPage.vue";
 
 const routes = [
 	{
@@ -114,7 +114,7 @@ const routes = [
     component: EstimationDetails,
   },
   {
-    path: "/agency/chat/details",
+    path: "/agency/chat/details/:id",
     name: "ChatDetails",
     component: ChatDetails,
   },

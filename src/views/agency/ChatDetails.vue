@@ -16,11 +16,11 @@
               Agent’s user list:
             </h4>
             <div class="flex space-x-5">
-              <div v-for="(user, index) in agentUsers" :key="index" class="text-center cursor-pointer" @click="showMessagePanel = true; showPropertyBtn = false">
+              <div v-for="(user, index) in agentUsers" :key="index" class="text-center cursor-pointer" @click="openChatPanel(user)">
                 <div class="avatar">
                   <div class="w-[45px] rounded-full">
                     <img :src="
-                        require(`../../assets/images/agents/${user.avatar}`)
+                        require(`../../assets/images/agents/${user.photo}`)
                       " />
                   </div>
                 </div>
@@ -36,12 +36,12 @@
                 <div class="panel-header rounded-t-3xl bg-leny-blue-800 h-18 flex items-center px-8">
                   <div class="avatar pr-4.5">
                     <div class="w-9 rounded-full">
-                      <img src="../../assets/images/agents/face_5.jpg" />
+                      <img :src="require(`../../assets/images/agents/${currentAgentChatPanel.photo}`)" />
                     </div>
                   </div>
                   <div>
                     <p class="text-base text-white font-futura-ptbook">
-                      Agent Name
+                      {{ this.currentAgentChatPanel.name }}
                     </p>
                     <p class="flex items-center">
                       <img src="../../assets/images/home_icon.svg" loading="lazy" role="presentation" />
@@ -50,7 +50,7 @@
                   </div>
                 </div>
                 <div class="panel-body flex-1 px-8">
-                  <message-item v-for="(message, index) in messagesList" :key="index" :is-agent="message.isAgent" :messageText="message.messageText" :userName="message.userName" :avatar="message.avatar" />
+                  <message-item v-for="(message, index) in messagesList" :key="index" :is-agent="message.isAgent" :messageText="message.messageText" :user-name="curreentUserChatBox.name" :user-avatar="curreentUserChatBox.photo" :agent-name="currentAgentChatPanel.name" :agent-avatar="currentAgentChatPanel.photo" />
                 </div>
                 <div class="panel-footer h-18 border-t border-leny-gray-500 flex items-center px-8">
                   <input v-model="message" class="border-0 focus:ring-0 pl-0 text-leny-gray-200 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-200 bg-transparent w-full focus:outline-none sm:text-sm" type="text" placeholder="Send a message…" />
@@ -68,15 +68,15 @@
                 </div>
               </div>
               <div class="w-1/6" @mouseover="showPropertyBtn = true" @mouseleave="showPropertyBtn = false">
-                <button v-if="showPropertyBtn && showMessagePanel" class="mt-4 h-8 flex items-center justify-between px-4 text-center font-futura-ptlight text-xs text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300" @click="showMessagePanel = false" >
+                <button v-if="showPropertyBtn && showMessagePanel" class="mt-4 h-8 flex items-center justify-between px-4 text-center font-futura-ptlight text-xs text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300" @click="showMessagePanel = false">
                   Property Name
                 </button>
                 <div class="mt-2">
                   <div class="flex flex-col space-y-4.5">
-                    <div v-for="(user, index) in agentUsers" :key="index" class="text-center cursor-pointer">
+                    <div v-for="(property, index) in userProperties" :key="index" class="text-center cursor-pointer">
                       <div class="avatar">
                         <div class="w-15 rounded-full">
-                          <img src="../../assets/images/propertychat.jpg" />
+                          <img :src="require(`../../assets/images/${property.images[0]}`)" />
                         </div>
                       </div>
                     </div>
@@ -96,7 +96,7 @@ import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import AgencyHeader from "../../components/agency/AgencyHeader.vue";
 import AgentCard from "../../components/agency/UserCard.vue";
-import MessageItem from "../../components/agency/MessageItem.vue"
+import MessageItem from "../../components/agency/MessageItem.vue";
 export default {
   name: "AgentsPage",
   components: {
@@ -104,79 +104,95 @@ export default {
     Footer,
     AgencyHeader,
     AgentCard,
-    MessageItem
+    MessageItem,
   },
   data: () => {
     return {
       showMessagePanel: false,
       showPropertyBtn: false,
-      message: '',
-      usersItems: [
-        {
-          name: "User Name",
-          email: "agent-email@gmail.com",
-          phone: "+33216897123",
-          photo: "face_1.jpg",
-        },
-        {
-          name: "User Name",
-          email: "agent-email@gmail.com",
-          phone: "+33216897123",
-          photo: "face_2.jpg",
-        },
-        {
-          name: "User Name",
-          email: "agent-email@gmail.com",
-          phone: "+33216897123",
-          photo: "face_3.jpg",
-        },
-      ],
-      agentUsers: [
-        {
-          name: "User Name",
-          avatar: "face_4.jpg",
-        },
-        {
-          name: "User Name",
-          avatar: "face_5.jpg",
-        },
-        {
-          name: "User Name",
-          avatar: "face_6.jpg",
-        },
-        {
-          name: "User Name",
-          avatar: "face_7.jpg",
-        },
-      ],
+      message: "",
+      usersItems: [],
+      agentUsers: [],
       arrayMessages: [
         {
           isAgent: true,
           userName: "Agent Name",
           messageText: "Hello",
-          avatar: "face_1.jpg"
+          avatar: "face_1.jpg",
         },
         {
           isAgent: false,
           userName: "User Name",
           messageText: "Hello, Can you Help me",
-          avatar: "face_2.jpg"
-        }
-      ]
+          avatar: "face_2.jpg",
+        },
+      ],
+      currentChatUser: {},
+      currentAgentUser: {},
     };
   },
   computed: {
-    messagesList () {
+    messagesList() {
       return this.arrayMessages;
+    },
+    curreentUserChatBox() {
+      return this.currentChatUser;
+    },
+    currentAgentChatPanel() {
+      return this.currentAgentUser;
+    },
+    userProperties() {
+      return this.getPropertiesByUser(this.currentChatUser.id)
     }
+  },
+  mounted() {
+    this.id = this.$route.params.id;
+    this.usersItems = this.getLatestAgentChatList(this.id);
+    this.agentUsers = this.getUsersByAgent(this.id);
   },
   methods: {
     addMessage() {
       if (this.message) {
-        this.arrayMessages.push({isAgent: true, userName: "Agent Name", messageText: this.message, avatar: "face_1.jpg"});
-        this.message = '';
+        this.arrayMessages.push({
+          isAgent: true,
+          userName: "Agent Name",
+          messageText: this.message,
+          avatar: "face_1.jpg",
+        });
+        this.message = "";
       }
+    },
+    getLatestAgentChatList(agentId) {
+      let agentsList = this.$store.state.agents;
+      const currentAgent = agentsList.find((agent) => {
+        return agent.id === agentId;
+      });
+      this.currentAgentUser = currentAgent;
+      agentsList = agentsList.filter((agent) => {
+        return agent !== currentAgent;
+      });
+      agentsList.unshift(currentAgent);
+      return agentsList.slice(0, 3);
+    },
+    getUsersByAgent(agentId) {
+      let usersList = this.$store.state.users;
+      usersList = usersList.filter((user) => {
+        return user.agentId === agentId;
+      });
+      return usersList;
+    },
+    openChatPanel(user) {
+      this.currentChatUser = user;
+      this.showMessagePanel = true; 
+      this.showPropertyBtn = false
+    },
+    getPropertiesByUser(userId) {
+      let properties =  this.$store.state.properties;
+      let userProperties = properties.filter(property => {
+        return property.users.indexOf(userId) !== -1;
+      });
+      return userProperties;
     }
-  }
+  },
 };
 </script>

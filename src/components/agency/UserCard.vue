@@ -7,7 +7,7 @@
     </div>
     <div class="card-body px-2 py-0">
       <div class="flex justify-between">
-        <h2 class="card-title font-futura-ptmedium font-normal text-leny-blue-800 text-2xl">{{ userName }}</h2>
+        <h2 class="card-title font-futura-ptmedium font-normal text-leny-blue-800 text-2xl line-clamp-1" :title="userName">{{ userName }}</h2>
         <div v-if="isAgent" class="dropdown dropdown-right">
           <label tabindex="0" class="btn btn-sm btn-circle btn-ghost">
             <img src="../../assets/images/three_dots.svg" loading="lazy" role="presentation">
@@ -45,7 +45,7 @@
         </span>
       </p>
       <div v-if="displayAction" class="card-actions">
-          <router-link v-if="isChatCard" to="/agency/chat/details" class="
+        <router-link v-if="isChatCard" :to="`/agency/chat/details/${id}`" class="
           h-8 flex items-center justify-between
           px-8
           text-center
@@ -80,15 +80,19 @@
 <script>
 import UpdateAgent from "../modals/UpdateAgent.vue";
 import DeleteAgent from "../modals/DeleteAgent.vue";
-import AssignUser from "../modals/AssignUser.vue"
+import AssignUser from "../modals/AssignUser.vue";
 export default {
   name: "AgentCard",
   components: {
     UpdateAgent,
     DeleteAgent,
-    AssignUser
+    AssignUser,
   },
   props: {
+    id: {
+      type: String,
+      default: "",
+    },
     userName: {
       type: String,
       default: "",

@@ -1,4 +1,7 @@
-import { createStore } from "vuex";
+import { createStore } from "vuex"
+import agents from '../data/agents'
+import users from '../data/users'
+import properties from '../data/properties'
 
 export default createStore({
 
@@ -6,7 +9,10 @@ export default createStore({
     name: 'International Building',
     abbreviation: 'IB',
     logo: '',
-    bio: 'Lorem ipsum dolor si amet'
+    bio: 'Lorem ipsum dolor si amet',
+    agents: agents,
+    users: users,
+    properties: properties
   },
   
   mutations: {},
