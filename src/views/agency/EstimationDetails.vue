@@ -118,20 +118,19 @@
       <div>
         <h4 class="mb-4 text-leny-blue-800 text-base font-futura-ptmedium">Estimate Status:</h4>
         <div class="flex items-center">
-          <select class="select w-full bg-white
-            shadow-[0px_0px_6px_rgba(0,0,0,0.29)] 
-            max-w-xs rounded-3xl 
-            h-10 max-h-10 min-h-min mr-6 
-            text-leny-gray-800
-            font-futura-ptlight text-xs
-            focus:outline-0">
-            <option disabled selected>Pick your favorite Simpson</option>
-            <option>Validated</option>
-            <option>Validated</option>
-            <option>Validated</option>
-            <option>Validated</option>
-            <option>Validated</option>
-          </select>
+          <div class="dropdown w-60 mr-6">
+            <label tabindex="0" class="border-0 flex items-center bg-white  text-leny-gray-500 hover:bg-white justify-between w-full normal-case pr-5  mr-6 px-4.5 font-futura-ptlight placeholder:text-xs placeholder:text-slate-400 rounded-full py-2.5 pl-6 shadow-[0px_0px_6px_rgba(0,0,0,0.29)] focus:outline-none focus:border-sky-500 focus:ring-0 sm:text-sm">
+              <span class="text-leny-gray-800">{{currentOption}}</span>
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-chevron-down text-leny-gray-800 w-3 h-3" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+              </svg>
+            </label>
+            <div tabindex="0" class="dropdown-content bg-white pt-4.5 px-6 shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-box flex w-full flex-wrap mt-2">
+              <ul class="bg-white">
+                <li v-for="(option,index) in propertiesOptions" :key="index" class="label-text font-futura-ptbook text-leny-gray-800 text-sm mb-4 cursor-pointer" @click="changeOption(option)"><a>{{option}}</a></li>
+              </ul>
+            </div>
+          </div>
           <button class="text-center h-10 flex justify-center items-center 
               w-32
               font-futura-ptbook
@@ -175,10 +174,10 @@
               text-center
               font-regular
               text-sm text-white
-              bg-leny-blue-800
+              bg-leny-cyan-400
               rounded-full
-              border border-leny-blue-800
-              hover:bg-transparent hover:text-leny-blue-800
+              border border-leny-cyan-400
+              hover:bg-transparent hover:text-leny-cyan-400
               transition
               duration-300
             ">Export estimate to product</button>
@@ -187,14 +186,12 @@
               font-futura-ptbook
               px-8
               text-center
-              font-regular
-              text-sm text-white
-              bg-leny-cyan-400
+              font-regularchange
+              text-white
+              bg-leny-blue-800
               rounded-full
-              border border-leny-cyan-400
-              hover:bg-transparent hover:text-leny-cyan-400
-              transition
-              duration-300
+              border border-leny-blue-800
+              hover:bg-transparent hover:text-leny-blue-800 cursor-pointer
             ">Transfer the estimate to an agent</label>
       </div>
     </div>
@@ -206,14 +203,14 @@
 import Header from "../../components/Header.vue";
 import Footer from "../../components/Footer.vue";
 import AgencyHeader from "../../components/agency/AgencyHeader.vue";
-import AssignAgent from "../../components/modals/AssignAgent.vue"
+import AssignAgent from "../../components/modals/AssignAgent.vue";
 export default {
   name: "EstimationDetails",
   components: {
     Header,
     Footer,
     AgencyHeader,
-    AssignAgent
+    AssignAgent,
   },
   data: () => {
     return {
@@ -242,7 +239,20 @@ export default {
         { name: "Condition sol", value: "new_or_recently renovated" },
         { name: "Condition fenetre", value: "Well_maintained" },
       ],
+      propertiesOptions: [
+        "Validated",
+        "Option One",
+        "Option Two",
+        "Option Three",
+        "Option Four",
+      ],
+      currentOption: "Validated",
     };
+  },
+  methods: {
+    changeOption(option) {
+      this.currentOption = option;
+    },
   },
 };
 </script>

@@ -7,7 +7,7 @@
         Choose Agent
       </p>
       <p class="text-sm text-leny-gray-700 font-futura-ptlight mb-4">Choose the agent to whom you want to transfer the estimate</p>
-      <ul class="h-80 overflow-x-hidden overflow-y-scroll scrollbar scrollbar-thumb-leny-gray-500 scrollbar-thumb-rounded-lg scrollbar-track-gray-100 scrollbar-medium">
+      <ul class="max-h-80 overflow-x-hidden overflow-y-scroll scrollbar scrollbar-thumb-leny-gray-500 scrollbar-thumb-rounded-lg scrollbar-track-gray-100 scrollbar-medium">
         <li v-for="(agent, index) in agentsList" :key="index" class="pl-2 mb-4 flex items-center">
           <input type="checkbox" class="mr-2 w-4 h-4 text-white bg-white shadow-[0px_0px_6px_rgba(0,0,0,0.29)] rounded-sm border-white focus:ring-0 focus:ring-offset-0 checked:bg-check" />
           <div class="avatar mr-3">

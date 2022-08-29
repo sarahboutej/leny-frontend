@@ -50,7 +50,7 @@
               <div class="bg-leny-cyan-400 text-white rounded-full w-8">
                 <span class="text-sm font-futura-ptbook">AA</span>
               </div>
-              <span class="text-sm ml-2 text-white font-futura-ptlight">Company name</span>
+              <span class="text-sm ml-2 text-white font-futura-ptlight">{{ $store.state.name }}</span>
             </div>
           </div>
           <div v-else class="space-x-3">
@@ -85,14 +85,14 @@
           </div>
           <div id="languageDropdown" class="dropdown dropdown-end">
             <div tabindex="0" class="border-0" @click="languageOpened = !languageOpened">
-              <img v-if="isAgencyPage" :src="!languageOpened && require('../assets/images/language_white_icon.svg')  || require('../assets/images/languageSelected_icon.svg')" />
+              <img v-if="isAgencyPage" src="../assets/images/language_white_icon.svg" />
               <img v-else :src="!languageOpened && require('../assets/images/language.svg')  || require('../assets/images/languageSelected_icon.svg')" />
             </div>
             <LanguageMenu v-if="languageOpened" />
           </div>
           <div id="notifDropdown" class="dropdown dropdown-end">
             <div tabindex="0" class="bg-transparent border-0 relative" @click="notificationsOpened = !notificationsOpened">
-               <img v-if="isAgencyPage" :src="!notificationsOpened && require('../assets/images/notification-white.png')  || require('../assets/images/notification_icon_selected.svg')" />
+               <img v-if="isAgencyPage" src="../assets/images/notification-white.png" />
               <img v-else :src="!notificationsOpened && require('../assets/images/notification.svg')  || require('../assets/images/notification_icon_selected.svg')" />
               <span class="
                 absolute

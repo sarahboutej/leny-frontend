@@ -2,6 +2,7 @@ import { createStore } from "vuex"
 import agents from '../data/agents'
 import users from '../data/users'
 import properties from '../data/properties'
+import messages from '../data/messages'
 
 export default createStore({
 
@@ -12,7 +13,8 @@ export default createStore({
     bio: 'Lorem ipsum dolor si amet',
     agents: agents,
     users: users,
-    properties: properties
+    properties: properties,
+    messages: messages
   },
   
   mutations: {},

@@ -1,5 +1,6 @@
 export default [
     {
+      id: "P01",
       type: "Apartment",
       title: "Monaco - Open view 01",
       address: "Monaco - Open view",
@@ -16,6 +17,7 @@ export default [
       users: ["U07","U08","U09"]
     },
     {
+      id: "P02",
       type: "Apartment",
       title: "Monaco - Open view 02",
       address: "Monaco - Open view",
@@ -32,6 +34,7 @@ export default [
       users: ["U05","U06","U07"]
     },
     {
+      id: "P03",
       type: "Apartment",
       title: "Monaco - Open view 03 ",
       address: "Monaco - Open view",
@@ -48,6 +51,7 @@ export default [
       users: ["U02","U03","U07"]
     },
     {
+      id: "P04",
       type: "Apartment",
       title: "Monaco - Open view 04",
       address: "Monaco - Open view",
@@ -61,9 +65,10 @@ export default [
         "property-img-3.jpg",
       ],
       time: "48",
-      users: ["U01","U06","U05"]
+      users: ["U04","U06","U05"]
     },
     {
+      id: "P05",
       type: "Apartment",
       title: "Monaco - Open view 05",
       address: "Monaco - Open view",
@@ -80,6 +85,7 @@ export default [
       users: ["U05","U06"]
     },
     {
+      id: "P06",
       type: "Apartment",
       title: "Monaco - Open view 06",
       address: "Monaco - Open view",
@@ -96,6 +102,7 @@ export default [
       users: ["U03","U04"]
     },
     {
+      id: "P07",
       type: "Apartment",
       title: "Monaco - Open view 07",
       address: "Monaco - Open view",
@@ -112,6 +119,7 @@ export default [
       users: ["U02","U02"]
     },
     {
+      id: "P08",
       type: "Apartment",
       title: "Monaco - Open view 08",
       address: "Monaco - Open view",

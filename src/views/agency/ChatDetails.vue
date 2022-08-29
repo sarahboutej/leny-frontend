@@ -8,14 +8,24 @@
       </h1>
       <div class="flex space-x-6">
         <div class="w-1/3 space-y-6" :class="showMessagePanel && 'items-strech'">
-          <agent-card v-for="(agent, index) in usersItems" :key="index" :user-name="agent.name" :user-email="agent.email" :user-phone="agent.phone" :user-photo="agent.photo" :isAgent="false" :buttonlabel="'Messages'" />
+          <agent-card 
+            v-for="(agent, index) in usersItems" 
+            :key="index" 
+            :id="agent.id"
+            :user-name="agent.name" 
+            :user-email="agent.email" 
+            :user-phone="agent.phone" 
+            :user-photo="agent.photo" 
+            :isAgent="false" 
+            :buttonlabel="agent.id !== $route.params.id && 'Messages' || 'close'" 
+            :isChatCard="true" />
         </div>
         <div class="w-2/3">
           <div v-if="!showMessagePanel" class="agent-list shadow-[0px_0px_6px_rgba(0,0,0,0.29)] p-8 pt-4.5 rounded-2xl">
             <h4 class="card-title font-futura-ptbook text-leny-blue-800 text-2xl mb-4.5">
               Agent’s user list:
             </h4>
-            <div class="flex space-x-5">
+            <div v-if="agentUsers && agentUsers.length" class="flex space-x-5">
               <div v-for="(user, index) in agentUsers" :key="index" class="text-center cursor-pointer" @click="openChatPanel(user)">
                 <div class="avatar">
                   <div class="w-[45px] rounded-full">
@@ -29,6 +39,7 @@
                 </p>
               </div>
             </div>
+            <p v-else class="text-sm text-leny-gray-700 font-futura-ptbook">There is no users for this agent</p>
           </div>
           <div v-else class="h-full">
             <div class="flex space-x-4 h-full">
@@ -50,7 +61,7 @@
                   </div>
                 </div>
                 <div class="panel-body flex-1 px-8">
-                  <message-item v-for="(message, index) in messagesList" :key="index" :is-agent="message.isAgent" :messageText="message.messageText" :user-name="curreentUserChatBox.name" :user-avatar="curreentUserChatBox.photo" :agent-name="currentAgentChatPanel.name" :agent-avatar="currentAgentChatPanel.photo" />
+                  <message-item v-for="(message, index) in chatBoxMessages" :key="index" :is-agent="message.isAgent" :messageText="message.messageText" :user-name="curreentUserChatBox.name" :user-avatar="curreentUserChatBox.photo" :agent-name="currentAgentChatPanel.name" :agent-avatar="currentAgentChatPanel.photo" />
                 </div>
                 <div class="panel-footer h-18 border-t border-leny-gray-500 flex items-center px-8">
                   <input v-model="message" class="border-0 focus:ring-0 pl-0 text-leny-gray-200 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-200 bg-transparent w-full focus:outline-none sm:text-sm" type="text" placeholder="Send a message…" />
@@ -68,12 +79,10 @@
                 </div>
               </div>
               <div class="w-1/6" @mouseover="showPropertyBtn = true" @mouseleave="showPropertyBtn = false">
-                <button v-if="showPropertyBtn && showMessagePanel" class="mt-4 h-8 flex items-center justify-between px-4 text-center font-futura-ptlight text-xs text-white bg-leny-blue-800 rounded-full border border-leny-blue-800 hover:bg-transparent hover:text-leny-blue-800 transition duration-300" @click="showMessagePanel = false">
-                  Property Name
-                </button>
                 <div class="mt-2">
                   <div class="flex flex-col space-y-4.5">
-                    <div v-for="(property, index) in userProperties" :key="index" class="text-center cursor-pointer">
+                    <div v-for="(property, index) in userProperties" :key="index" class="text-center cursor-pointer tooltip opacity-100 relative tooltip-leny-blue-800 z-10" :data-tip="property.title" 
+                      @click="getChatByPropertiesAdnUserAndAgent(currentChatUser.id, property.id, $route.params.id)">
                       <div class="avatar">
                         <div class="w-15 rounded-full">
                           <img :src="require(`../../assets/images/${property.images[0]}`)" />
@@ -110,25 +119,14 @@ export default {
     return {
       showMessagePanel: false,
       showPropertyBtn: false,
+      initializeChatBox: true,
       message: "",
       usersItems: [],
       agentUsers: [],
-      arrayMessages: [
-        {
-          isAgent: true,
-          userName: "Agent Name",
-          messageText: "Hello",
-          avatar: "face_1.jpg",
-        },
-        {
-          isAgent: false,
-          userName: "User Name",
-          messageText: "Hello, Can you Help me",
-          avatar: "face_2.jpg",
-        },
-      ],
+      arrayMessages: [],
       currentChatUser: {},
       currentAgentUser: {},
+      currentChatBox:{}
     };
   },
   computed: {
@@ -142,7 +140,14 @@ export default {
       return this.currentAgentUser;
     },
     userProperties() {
-      return this.getPropertiesByUser(this.currentChatUser.id)
+      return this.getPropertiesByUser(this.currentChatUser.id);
+    },
+    chatBoxMessages() {
+      if(this.currentChatBox && this.currentChatBox.length) {
+        return this.currentChatBox[0].messagetexts
+      } else {
+        return [];
+      }
     }
   },
   mounted() {
@@ -152,12 +157,10 @@ export default {
   },
   methods: {
     addMessage() {
-      if (this.message) {
-        this.arrayMessages.push({
+      if (this.currentChatBox && this.currentChatBox.length) {
+        this.currentChatBox[0].messagetexts.push({
           isAgent: true,
-          userName: "Agent Name",
           messageText: this.message,
-          avatar: "face_1.jpg",
         });
         this.message = "";
       }
@@ -183,16 +186,43 @@ export default {
     },
     openChatPanel(user) {
       this.currentChatUser = user;
-      this.showMessagePanel = true; 
-      this.showPropertyBtn = false
+      this.showMessagePanel = true;
+      this.showPropertyBtn = false;
     },
     getPropertiesByUser(userId) {
-      let properties =  this.$store.state.properties;
-      let userProperties = properties.filter(property => {
+      let properties = this.$store.state.properties;
+      let userProperties = properties.filter((property) => {
         return property.users.indexOf(userId) !== -1;
       });
+      if (userProperties.length && this.initializeChatBox) {
+        this.currentChatBox = this.getChatByPropertiesAdnUserAndAgent(userId,userProperties[0].id, this.id );
+      }
+      this.initializeChatBox = false;
       return userProperties;
-    }
+    },
+    getChatByPropertiesAdnUserAndAgent(userId, propertyId, agentId) {
+      let chatMessages = this.$store.state.messages;
+      let propertyChat = chatMessages.filter((message) => {
+        return message.userId === userId && message.propertyId === propertyId && message.agentId === agentId
+      });
+      console.warn(propertyChat,propertyId);
+      if( propertyChat ) {
+        this.currentChatBox = propertyChat;
+      }
+      return propertyChat;
+    },
   },
 };
 </script>
+<style scoped>
+.tooltip:before {
+  background-color: #112c61 !important;
+  border-radius: 1rem !important;
+  padding: 7px 22px !important;
+  font-family: futura_ptlight;
+  font-size: 12px;
+}
+.tooltip:after {
+  display: none !important;
+}
+</style>

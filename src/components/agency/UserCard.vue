@@ -45,7 +45,7 @@
         </span>
       </p>
       <div v-if="displayAction" class="card-actions">
-        <router-link v-if="isChatCard" :to="`/agency/chat/details/${id}`" class="
+        <router-link v-if="isChatCard" :to="buttonlabel === 'Messages' && `/agency/chat/details/${id}` || '/agency/chat'" class="
           h-8 flex items-center justify-between
           px-8
           text-center

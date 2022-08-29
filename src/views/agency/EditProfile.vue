@@ -104,7 +104,7 @@
                 <div class="w-2/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3 font-futura-ptlight">
                   <span class="text-leny-gray-800 text-sm font-futura-ptbook p-0">Choose Properties</span>
                   <div class="dropdown block w-full">
-                    <label tabindex="0" class="btn border-0 flex items-center bg-leny-gray-300 hover:bg-leny-gray-300  text-leny-gray-700 justify-between w-full normal-case px-0 pr-5">
+                    <label tabindex="0" class="border-0 flex items-center bg-leny-gray-300 hover:bg-leny-gray-300  text-leny-gray-700 justify-between w-full normal-case px-0 pr-5">
                       <span class="text-leny-gray-600">Choose properties list will show to user</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
                         <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z" />
