@@ -23,7 +23,7 @@
                 <div class="w-1/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3">
                   <div>
                     <label for="agencyName" class="text-leny-gray-800 text-sm font-futura-ptlight">Company Name</label>
-                    <input v-model="$store.state.name" class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" type="text" id="myUserName" name="agencyName" />
+                    <input v-model="$store.state.agencyName" class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" type="text" id="myUserName" name="agencyName" />
                   </div>
                 </div>
                 <div class="w-2/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 py-2.5 px-3">
@@ -147,12 +147,12 @@
               <div class="flex items-center space-x-4.5 flex-nowrap mt-4.5">
                 <div class="w-1/2 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 h-16 flex items-center">
                   <div>
-                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Name on the card" type="text" id="myUserName" name="agencyName" />
+                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-700 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" placeholder="Name on the card" type="text" id="myUserName" name="agencyName" />
                   </div>
                 </div>
                 <div class="w-1/2 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 h-16 flex items-center">
                   <div>
-                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Card number" type="text" id="agencyBio" name="agencyBio" />
+                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-700 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" placeholder="Card number" type="text" id="agencyBio" name="agencyBio" />
                   </div>
                 </div>
               </div>
@@ -160,17 +160,17 @@
               <div class="flex items-center space-x-4.5 flex-nowrap mt-4.5">
                 <div class="w-1/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 h-16 flex items-center">
                   <div>
-                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="MM / YY" type="text" id="myUserName" name="agencyName" />
+                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-700 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" placeholder="MM / YY" type="text" id="myUserName" name="agencyName" />
                   </div>
                 </div>
                 <div class="w-1/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 h-16 flex items-center">
                   <div>
-                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="CVC" type="text" id="agencyBio" name="agencyBio" />
+                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-700 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" placeholder="CVC" type="text" id="agencyBio" name="agencyBio" />
                   </div>
                 </div>
                 <div class="w-1/3 bg-leny-gray-300 rounded-2.5 text-leny-gray-700 h-16 flex items-center">
                   <div>
-                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-slate-400 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" value="Zip/Postal Code" type="text" id="agencyBio" name="agencyBio" />
+                    <input class="border-0 focus:ring-0 text-leny-gray-700 font-futura-ptbook placeholder:text-sm placeholder:text-leny-gray-700 bg-transparent rounded-full w-full focus:outline-none sm:text-sm" placeholder="Zip/Postal Code" type="text" id="agencyBio" name="agencyBio" />
                   </div>
                 </div>
               </div>

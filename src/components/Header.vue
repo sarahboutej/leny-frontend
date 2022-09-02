@@ -47,10 +47,11 @@
         <div class="hidden md:flex items-center space-x-3">
           <div v-if="isAgencyPage" class="mr-2">
             <div class="avatar placeholder items-center font-light">
-              <div class="bg-leny-cyan-400 text-white rounded-full w-8">
-                <span class="text-sm font-futura-ptbook">AA</span>
+              <div v-if="$store.state.logo" :style="{ 'background-image': `url(${$store.state.logo})` }" class="rounded-full w-8 bg-cover"></div>
+              <div v-else class="bg-leny-cyan-400 text-white rounded-full w-8">
+                <span class="text-sm font-futura-ptbook"> {{ abbriviation }} </span>
               </div>
-              <span class="text-sm ml-2 text-white font-futura-ptlight">{{ $store.state.name }}</span>
+              <span class="text-sm ml-2 text-white font-futura-ptlight">{{ $store.state.agencyName }}</span>
             </div>
           </div>
           <div v-else class="space-x-3">
@@ -193,6 +194,11 @@ export default {
         },
       ],
     };
+  },
+  computed: {
+    abbriviation () {
+      return this.$store.getters.getCompanyAbbreviation;
+    }
   },
   beforeMount() {
     window.addEventListener("scroll", this.handleScroll);

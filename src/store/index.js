@@ -7,7 +7,7 @@ import messages from '../data/messages'
 export default createStore({
 
   state: {
-    name: 'International Building',
+    agencyName: 'International Building',
     abbreviation: 'IB',
     logo: '',
     bio: 'Lorem ipsum dolor si amet',
@@ -19,5 +19,9 @@ export default createStore({
   
   mutations: {},
   actions: {},
-  getters: {},
+  getters: {
+    getCompanyAbbreviation(state) {
+      return state.agencyName.split(' ').map(name => name[0]).join('').toUpperCase().slice(0,2); 
+    }
+  },
 });
